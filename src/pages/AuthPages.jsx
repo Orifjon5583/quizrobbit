@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { LogIn, UserPlus } from "lucide-react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { ErrorBox } from "../components/UI";
 import { useAuth } from "../context/AuthContext";
@@ -26,7 +27,7 @@ function AuthForm({ register = false }) {
       <label><span className="label">Email</span><input required type="email" className="input" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} /></label>
       <label><span className="label">Parol</span><input required minLength="6" type="password" className="input" value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} /></label>
       <ErrorBox message={error} />
-      <button disabled={loading} className="btn-primary w-full">{loading ? "Kuting..." : register ? "Ro'yxatdan o'tish" : "Kirish"}</button>
+      <button disabled={loading} className="btn-primary w-full">{register ? <UserPlus size={18}/> : <LogIn size={18}/>} {loading ? "Kuting..." : register ? "Ro'yxatdan o'tish" : "Kirish"}</button>
     </form>
     <p className="mt-4 text-sm text-slate-500">{register ? "Akkauntingiz bormi?" : "Akkauntingiz yo'qmi?"} <Link className="font-bold text-indigo-600" to={register ? "/login" : "/register"}>{register ? "Kirish" : "Ro'yxatdan o'tish"}</Link></p>
   </div>;
