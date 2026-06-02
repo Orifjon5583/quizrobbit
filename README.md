@@ -1,55 +1,104 @@
 # Attestatsiya Quiz Platform
 
-API key talab qilmaydigan React va Tailwind CSS quiz platformasi.
+AWS server uchun React, Tailwind CSS, Node.js va PostgreSQL asosidagi quiz platformasi.
 
-## Ishga tushirish
+## Imkoniyatlar
+
+- Umumiy server bazasida userlar, natijalar va reyting
+- `bcrypt` bilan hash qilingan parollar
+- JWT tokenli login
+- Server tekshiradigan 20 soniyalik timer
+- Server tomonidan random savollar va variantlar
+- Natijani faqat bir marta saqlash
+- Admin panelda barcha ro'yxatdan o'tgan foydalanuvchilar
+- Mobil va desktop responsive dizayn
+- Savollarni `savollar.xlsx` orqali boshqarish
+
+## Lokal Ishga Tushirish
+
+PostgreSQL baza yarating va `.env.example` nusxasidan `.env` fayl tayyorlang:
 
 ```bash
+cp .env.example .env
 npm install
+npm run build
+npm start
+```
+
+Frontend va API birgalikda `http://127.0.0.1:3001` da ishlaydi.
+
+Frontend ustida ishlash uchun alohida terminalda:
+
+```bash
+npm run server:dev
 npm run dev
 ```
 
-`.env`, Firebase va alohida baza sozlash kerak emas. Savollar loyiha ichidagi `savollar.xlsx` faylidan olinadi.
+Vite `/api` so'rovlarini `127.0.0.1:3001` portga yo'naltiradi.
 
-## Savollarni Excel orqali o'zgartirish
+## Excel Savollar
 
-`savollar.xlsx` faylini Excel dasturida oching va savollarni tahrirlang. Ustun nomlarini o'zgartirmang:
+Savollar [savollar.xlsx](./savollar.xlsx) faylida saqlanadi. Server ishga tushganda Excel faylni o'qiydi. Ustun nomlari:
 
 ```text
 category, question, option1, option2, option3, option4, correctAnswer, difficulty
 ```
 
-Keyin dev serverni qayta ishga tushiring:
+Excel o'zgarganidan keyin serverni qayta ishga tushiring:
 
 ```bash
-npm run dev
+pm2 restart attestatsiya
 ```
 
-`npm run dev` va `npm run build` oldidan Excel fayl avtomatik o'qilib, sayt uchun JSON yangilanadi.
+## AWS Deploy
 
-Excel o'zgarganidan keyin sayt qayta ishga tushirilsa, brauzerdagi savollar ham avtomatik yangilanadi.
-
-## Foydalanuvchi
-
-Oddiy foydalanuvchi `/register` orqali ro'yxatdan o'tadi va `/login` orqali kiradi. Quiz natijalari, profil va reyting shu brauzerda saqlanadi.
-
-## Admin
-
-Admin uchun alohida sahifa:
+Server talablari:
 
 ```text
-/admin-login
+Ubuntu
+Node.js 20+
+PostgreSQL
+Nginx
+PM2
 ```
 
-Standart lokal kirish ma'lumotlari:
+AWS Security Group inbound portlari:
 
 ```text
-login: admin
-parol: admin123
+22    SSH    faqat administrator IP
+80    HTTP   0.0.0.0/0
+443   HTTPS  0.0.0.0/0
 ```
 
-Admin panel faqat ro'yxatdan o'tgan foydalanuvchilarni ko'rsatadi.
+`3001` portni internetga ochmang. Nginx ichki `127.0.0.1:3001` portga proxy qiladi.
 
-## Muhim
+PostgreSQL tayyorlash:
 
-Bu API keysiz lokal variant. Ma'lumotlar serverda emas, foydalanuvchining brauzerida saqlanadi. Boshqa kompyuterdagi foydalanuvchilar umumiy ro'yxatda ko'rinmaydi. Umumiy internet sayti uchun keyinchalik backend yoki Firebase ulash kerak bo'ladi.
+```bash
+sudo -u postgres psql
+CREATE USER attestatsiya WITH PASSWORD 'KUCHLI_PAROL';
+CREATE DATABASE attestatsiya OWNER attestatsiya;
+\q
+```
+
+Server `.env` fayli:
+
+```env
+PORT=3001
+DATABASE_URL=postgresql://attestatsiya:KUCHLI_PAROL@127.0.0.1:5432/attestatsiya
+JWT_SECRET=UZUN_RANDOM_SECRET
+ADMIN_LOGIN=admin
+ADMIN_PASSWORD=KUCHLI_ADMIN_PAROL
+```
+
+Deploy:
+
+```bash
+cd /var/www/Attestatsiya-Robbit
+git pull origin main
+npm install
+npm run build
+pm2 delete attestatsiya || true
+pm2 start ecosystem.config.cjs
+pm2 save
+```

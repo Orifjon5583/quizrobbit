@@ -2,11 +2,11 @@ import { Award, CheckCircle2, RotateCcw } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Loader, StatCard } from "../components/UI";
-import { getResult } from "../lib/storage";
+import { api } from "../lib/api";
 
 export default function Result() {
   const { id } = useParams(); const [result, setResult] = useState(null);
-  useEffect(() => { setResult(getResult(id)); }, [id]);
+  useEffect(() => { api.result(id).then(setResult); }, [id]);
   if (!result) return <Loader />;
   return <div className="mx-auto max-w-3xl animate-fade-in text-center">
     <Award className="mx-auto text-amber-500" size={56}/><h1 className="mt-3 text-2xl font-black sm:text-3xl">Quiz yakunlandi!</h1><p className="mt-2 text-sm text-slate-500 sm:text-base">{result.category} bo'yicha natijangiz</p>

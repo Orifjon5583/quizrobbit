@@ -1,13 +1,12 @@
 import { Medal, Timer, Trophy } from "lucide-react";
 import { useEffect, useState } from "react";
 import { categories } from "../lib/constants";
-import { getRows } from "../lib/storage";
+import { api } from "../lib/api";
 
 export default function Leaderboard() {
   const [category, setCategory] = useState("global"); const [rows, setRows] = useState([]); const [fast, setFast] = useState(false);
   useEffect(() => {
-    const filtered = getRows("results").filter(result => category === "global" || result.category === category);
-    setRows(filtered.sort((a, b) => fast ? a.durationSeconds - b.durationSeconds : b.score - a.score).slice(0, 10));
+    api.leaderboard(category, fast).then(setRows);
   }, [category, fast]);
   return <div className="animate-fade-in"><div className="flex flex-wrap items-end justify-between gap-4"><div><h1 className="flex items-center gap-2 text-2xl font-black sm:text-3xl"><Trophy className="text-amber-500"/> Top 10 reyting</h1><p className="mt-1 text-sm text-slate-500 sm:text-base">Eng yuqori natijalar va eng tez qatnashchilar.</p></div><div className="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto"><select className="input min-w-0 text-sm" value={category} onChange={e => setCategory(e.target.value)}><option value="global">Global reyting</option>{categories.map(c => <option key={c.name}>{c.name}</option>)}</select><button className="btn-secondary whitespace-nowrap text-sm" onClick={() => setFast(!fast)}>{fast ? <Trophy size={17}/> : <Timer size={17}/>} {fast ? "Eng yuqori ball" : "Eng tezlar"}</button></div></div>
     <div className="mt-5 grid gap-2 sm:hidden">{rows.map((r, i) => <div className="card flex items-center gap-3" key={r.id}><div className="w-7 shrink-0 text-center font-black">{i < 3 ? <Medal className={`mx-auto ${i === 0 ? "text-amber-500" : i === 1 ? "text-slate-400" : "text-orange-700"}`} size={20}/> : i + 1}</div><div className="min-w-0 flex-1"><p className="truncate font-bold">{r.userName}</p><p className="truncate text-xs text-slate-500">{r.category} · {r.percentage}% · {r.durationSeconds}s</p></div><p className="text-xl font-black text-indigo-600">{r.score}</p></div>)}{!rows.length && <p className="card text-center text-sm text-slate-500">Natijalar hali mavjud emas.</p>}</div>

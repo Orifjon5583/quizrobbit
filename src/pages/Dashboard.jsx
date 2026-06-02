@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { StatCard } from "../components/UI";
 import { useAuth } from "../context/AuthContext";
 import { categories } from "../lib/constants";
-import { getRows } from "../lib/storage";
+import { api } from "../lib/api";
 
 export default function Dashboard() {
   const { user, profile } = useAuth();
   const [results, setResults] = useState([]);
-  useEffect(() => { setResults(getRows("results").filter(result => result.userId === user.uid).sort((a, b) => b.createdAt.localeCompare(a.createdAt))); }, [user.uid]);
+  useEffect(() => { api.myResults().then(setResults); }, [user.uid]);
   const best = Math.max(0, ...results.map(r => r.score));
   return <div className="animate-fade-in">
     <div className="flex flex-wrap items-center justify-between gap-4"><div><p className="text-sm text-slate-500 sm:text-base">Xush kelibsiz,</p><h1 className="text-2xl font-black sm:text-3xl">{profile?.name || user.displayName || "Foydalanuvchi"}</h1></div><Link to="/categories" className="btn-primary w-full sm:w-auto"><PlayCircle size={18} /> Quiz boshlash</Link></div>

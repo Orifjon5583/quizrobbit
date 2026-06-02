@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Users } from "lucide-react";
 import { EmptyState } from "../components/UI";
-import { getRows } from "../lib/storage";
+import { api } from "../lib/api";
 
 export default function Admin() {
   const [users, setUsers] = useState([]);
-  useEffect(() => setUsers(getRows("users")), []);
+  useEffect(() => { api.users().then(setUsers); }, []);
   return <div className="animate-fade-in">
     <h1 className="flex items-center gap-2 text-2xl font-black sm:text-3xl"><Users className="text-indigo-600"/> Admin panel</h1>
     <p className="mt-1 text-sm text-slate-500 sm:text-base">Ro'yxatdan o'tgan foydalanuvchilar.</p>
