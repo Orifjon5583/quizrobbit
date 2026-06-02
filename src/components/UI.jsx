@@ -13,5 +13,5 @@ export const ErrorBox = ({ message }) => message ? (
 export const EmptyState = ({ children }) => <div className="card text-center text-slate-500">{children}</div>;
 
 export function StatCard({ label, value, accent = "text-indigo-600" }) {
-  return <div className="card"><p className="text-sm text-slate-500">{label}</p><p className={`mt-1 text-3xl font-black ${accent}`}>{value}</p></div>;
+  return <div className="card"><p className="text-xs text-slate-500 sm:text-sm">{label}</p><p className={`mt-1 text-2xl font-black sm:text-3xl ${accent}`}>{value}</p></div>;
 }

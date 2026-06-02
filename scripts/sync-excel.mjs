@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { createHash } from "node:crypto";
 import XLSX from "xlsx";
 
 const source = resolve("savollar.xlsx");
@@ -17,6 +18,8 @@ const questions = rows.map((row, index) => {
   return question;
 });
 await mkdir(resolve("src/generated"), { recursive: true });
-await writeFile(resolve("src/generated/questions.json"), `${JSON.stringify(questions, null, 2)}\n`);
-await writeFile(resolve("src/generated/questions-version.json"), `${JSON.stringify({ version: Date.now() }, null, 2)}\n`);
+const json = `${JSON.stringify(questions, null, 2)}\n`;
+const version = createHash("sha256").update(json).digest("hex").slice(0, 12);
+await writeFile(resolve("src/generated/questions.json"), json);
+await writeFile(resolve("src/generated/questions-version.json"), `${JSON.stringify({ version }, null, 2)}\n`);
 console.log(`${questions.length} ta savol Excel fayldan yangilandi.`);
