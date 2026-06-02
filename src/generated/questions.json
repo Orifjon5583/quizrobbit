@@ -1,0 +1,2402 @@
+[
+  {
+    "category": "Scratch",
+    "question": "Scratch dasturida sprite nima?",
+    "options": [
+      "Sahnadagi boshqariladigan obyekt",
+      "Faqat fon rasmi",
+      "Ovoz fayli",
+      "Loyiha nomi"
+    ],
+    "correctAnswer": "Sahnadagi boshqariladigan obyekt",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Yashil bayroq bosilganda bloki qachon ishlaydi?",
+    "options": [
+      "Loyiha boshlanganda",
+      "Sprite o'chirilganda",
+      "Faqat ovoz tugaganda",
+      "Fon almashganda"
+    ],
+    "correctAnswer": "Loyiha boshlanganda",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Takrorlanuvchi amallar uchun qaysi blok ishlatiladi?",
+    "options": [
+      "repeat",
+      "say",
+      "wait",
+      "broadcast"
+    ],
+    "correctAnswer": "repeat",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Sprite koordinatalar tekisligining markazi qayerda?",
+    "options": [
+      "x:0, y:0",
+      "x:240, y:180",
+      "x:-240, y:-180",
+      "x:100, y:100"
+    ],
+    "correctAnswer": "x:0, y:0",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "if bloki qanday vazifani bajaradi?",
+    "options": [
+      "Shartni tekshiradi",
+      "Ovozni yozadi",
+      "Spriteni chizadi",
+      "Fonni o'chiradi"
+    ],
+    "correctAnswer": "Shartni tekshiradi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "broadcast bloki nima uchun kerak?",
+    "options": [
+      "Xabar yuborish uchun",
+      "Rang tanlash uchun",
+      "Fayl saqlash uchun",
+      "Koordinata o'lchash uchun"
+    ],
+    "correctAnswer": "Xabar yuborish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "Scratchdagi variable nima?",
+    "options": [
+      "Qiymat saqlovchi o'zgaruvchi",
+      "Faqat rasm",
+      "Harakat bloki",
+      "Sprite nusxasi"
+    ],
+    "correctAnswer": "Qiymat saqlovchi o'zgaruvchi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "forever bloki ichidagi buyruqlar necha marta bajariladi?",
+    "options": [
+      "To'xtatilguncha doimiy",
+      "Faqat bir marta",
+      "Aniq o'n marta",
+      "Umuman bajarilmaydi"
+    ],
+    "correctAnswer": "To'xtatilguncha doimiy",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "clone nima uchun ishlatiladi?",
+    "options": [
+      "Sprite nusxasini yaratish uchun",
+      "Ovozni pasaytirish uchun",
+      "Loyihani yopish uchun",
+      "Fon rangini olish uchun"
+    ],
+    "correctAnswer": "Sprite nusxasini yaratish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "Sensing bo'limidagi touching bloki nimani aniqlaydi?",
+    "options": [
+      "Tegishni",
+      "Ovoz balandligini o'zgartirishni",
+      "Sprite yaratishni",
+      "Takrorlashni"
+    ],
+    "correctAnswer": "Tegishni",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "costume tushunchasi nimani anglatadi?",
+    "options": [
+      "Sprite ko'rinishini",
+      "Kod papkasini",
+      "Sahna o'lchamini",
+      "Ovoz tezligini"
+    ],
+    "correctAnswer": "Sprite ko'rinishini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "List qaysi holatda qulay?",
+    "options": [
+      "Bir nechta qiymatni tartibli saqlashda",
+      "Faqat bitta son saqlashda",
+      "Fonni almashtirishda",
+      "Sprite aylantirishda"
+    ],
+    "correctAnswer": "Bir nechta qiymatni tartibli saqlashda",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "wait 1 seconds bloki nima qiladi?",
+    "options": [
+      "Kod bajarilishini bir soniya kutadi",
+      "Spriteni o'chiradi",
+      "Ovozni yozadi",
+      "Qiymatni nol qiladi"
+    ],
+    "correctAnswer": "Kod bajarilishini bir soniya kutadi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Pen extension nimaga xizmat qiladi?",
+    "options": [
+      "Sahnada chizishga",
+      "Ovoz yozishga",
+      "Video yuklashga",
+      "Login qilishga"
+    ],
+    "correctAnswer": "Sahnada chizishga",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Operatorlar bo'limidagi mod amali nimani qaytaradi?",
+    "options": [
+      "Bo'lishdan qolgan qoldiqni",
+      "Sonning kvadratini",
+      "Matn uzunligini",
+      "Tasodifiy rangni"
+    ],
+    "correctAnswer": "Bo'lishdan qolgan qoldiqni",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "ask and wait bloki natijasi qayerda saqlanadi?",
+    "options": [
+      "answer blokida",
+      "mouse x blokida",
+      "timer blokida",
+      "costume blokida"
+    ],
+    "correctAnswer": "answer blokida",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "Backdrop nima?",
+    "options": [
+      "Sahna foni",
+      "Sprite o'zgaruvchisi",
+      "Mikrofon ovozi",
+      "Harakat tezligi"
+    ],
+    "correctAnswer": "Sahna foni",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "My Blocks bo'limining vazifasi nima?",
+    "options": [
+      "O'z bloklarini yaratish",
+      "Fonni o'chirish",
+      "Akkaunt ochish",
+      "Ovoz yozish"
+    ],
+    "correctAnswer": "O'z bloklarini yaratish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "pick random 1 to 10 bloki nimani beradi?",
+    "options": [
+      "1 dan 10 gacha tasodifiy son",
+      "Doim 10 sonini",
+      "Faqat juft son",
+      "Sprite sonini"
+    ],
+    "correctAnswer": "1 dan 10 gacha tasodifiy son",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Sprite sahna chegarasidan qaytishi uchun qaysi blok ishlatiladi?",
+    "options": [
+      "if on edge, bounce",
+      "go to front layer",
+      "set rotation style",
+      "change size"
+    ],
+    "correctAnswer": "if on edge, bounce",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "and operatori qachon true qaytaradi?",
+    "options": [
+      "Ikkala shart ham rost bo'lsa",
+      "Bitta shart rost bo'lsa",
+      "Ikkala shart yolg'on bo'lsa",
+      "Har doim"
+    ],
+    "correctAnswer": "Ikkala shart ham rost bo'lsa",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "Timer blokini nolga tushirish uchun nima ishlatiladi?",
+    "options": [
+      "reset timer",
+      "stop all",
+      "clear graphic effects",
+      "erase all"
+    ],
+    "correctAnswer": "reset timer",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Scratch",
+    "question": "stop all bloki nima qiladi?",
+    "options": [
+      "Barcha skriptlarni to'xtatadi",
+      "Faqat ovozni to'xtatadi",
+      "Bir spriteni yashiradi",
+      "Loyihani saqlaydi"
+    ],
+    "correctAnswer": "Barcha skriptlarni to'xtatadi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "change x by 10 bloki spriteni qaysi yo'nalishda siljitadi?",
+    "options": [
+      "O'ngga",
+      "Yuqoriga",
+      "Pastga",
+      "Chapga"
+    ],
+    "correctAnswer": "O'ngga",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Scratch",
+    "question": "Parallel ishlash Scratchda qanday yuz beradi?",
+    "options": [
+      "Bir nechta skript bir vaqtda ishga tushadi",
+      "Faqat bitta blok yoziladi",
+      "Faqat fon almashadi",
+      "Kod matnga aylanadi"
+    ],
+    "correctAnswer": "Bir nechta skript bir vaqtda ishga tushadi",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Python",
+    "question": "Pythonda list nima?",
+    "options": [
+      "Bir nechta qiymatni tartibli saqlaydigan tuzilma",
+      "Faqat son saqlaydigan funksiya",
+      "HTML tegi",
+      "CSS xossasi"
+    ],
+    "correctAnswer": "Bir nechta qiymatni tartibli saqlaydigan tuzilma",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "Python faylining odatiy kengaytmasi qaysi?",
+    "options": [
+      ".py",
+      ".html",
+      ".css",
+      ".exe"
+    ],
+    "correctAnswer": ".py",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "Ekranga ma'lumot chiqarish uchun qaysi funksiya ishlatiladi?",
+    "options": [
+      "print()",
+      "input()",
+      "len()",
+      "type()"
+    ],
+    "correctAnswer": "print()",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "Foydalanuvchidan qiymat olish uchun nima ishlatiladi?",
+    "options": [
+      "input()",
+      "range()",
+      "sum()",
+      "open()"
+    ],
+    "correctAnswer": "input()",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "len('salom') natijasi nima?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "salom"
+    ],
+    "correctAnswer": "5",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "Qaysi operator darajaga oshiradi?",
+    "options": [
+      "**",
+      "//",
+      "%",
+      "=="
+    ],
+    "correctAnswer": "**",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "if operatorining vazifasi nima?",
+    "options": [
+      "Shartni tekshirish",
+      "Takrorlash",
+      "Fayl ochish",
+      "Funksiya yaratish"
+    ],
+    "correctAnswer": "Shartni tekshirish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "for sikli qachon qulay?",
+    "options": [
+      "Ketma-ketlik bo'ylab yurishda",
+      "Faqat xatoni ushlashda",
+      "Modul o'rnatishda",
+      "Izoh yozishda"
+    ],
+    "correctAnswer": "Ketma-ketlik bo'ylab yurishda",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "Dictionary qaysi juftliklarni saqlaydi?",
+    "options": [
+      "Kalit va qiymat",
+      "Faqat indeks va rang",
+      "Funksiya va klass",
+      "Satr va izoh"
+    ],
+    "correctAnswer": "Kalit va qiymat",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "List indekslari nechadan boshlanadi?",
+    "options": [
+      "0 dan",
+      "1 dan",
+      "-1 dan",
+      "10 dan"
+    ],
+    "correctAnswer": "0 dan",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "Funksiya e'lon qilish kalit so'zi qaysi?",
+    "options": [
+      "def",
+      "func",
+      "function",
+      "method"
+    ],
+    "correctAnswer": "def",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "append() metodi nima qiladi?",
+    "options": [
+      "List oxiriga element qo'shadi",
+      "Listni o'chiradi",
+      "Listni satrga aylantiradi",
+      "Birinchi elementni oladi"
+    ],
+    "correctAnswer": "List oxiriga element qo'shadi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "10 // 3 natijasi nima?",
+    "options": [
+      "3",
+      "3.33",
+      "1",
+      "0"
+    ],
+    "correctAnswer": "3",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "10 % 3 natijasi nima?",
+    "options": [
+      "1",
+      "3",
+      "0",
+      "10"
+    ],
+    "correctAnswer": "1",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "Boolean qiymatlar qaysilar?",
+    "options": [
+      "True va False",
+      "Yes va No",
+      "1 va 2",
+      "On va Off"
+    ],
+    "correctAnswer": "True va False",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "try/except konstruksiyasi nima uchun kerak?",
+    "options": [
+      "Xatolarni boshqarish uchun",
+      "List saralash uchun",
+      "Sikl yaratish uchun",
+      "Matn chiqarish uchun"
+    ],
+    "correctAnswer": "Xatolarni boshqarish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "class kalit so'zi nimani yaratadi?",
+    "options": [
+      "Klassni",
+      "Siklni",
+      "Modulni",
+      "Izohni"
+    ],
+    "correctAnswer": "Klassni",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "import math nima qiladi?",
+    "options": [
+      "math modulini ulaydi",
+      "Math nomli faylni o'chiradi",
+      "Sonni matnga aylantiradi",
+      "Funksiyani yopadi"
+    ],
+    "correctAnswer": "math modulini ulaydi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Python",
+    "question": "Set tuzilmasining muhim xususiyati nima?",
+    "options": [
+      "Takroriy elementlarni saqlamaydi",
+      "Faqat son qabul qiladi",
+      "Indeksi doim 1 dan boshlanadi",
+      "O'zgarmas bo'ladi"
+    ],
+    "correctAnswer": "Takroriy elementlarni saqlamaydi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "Tuple listdan qanday farq qiladi?",
+    "options": [
+      "Elementlarini o'zgartirib bo'lmaydi",
+      "Faqat matn saqlaydi",
+      "Har doim bo'sh bo'ladi",
+      "Indeksi yo'q"
+    ],
+    "correctAnswer": "Elementlarini o'zgartirib bo'lmaydi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "range(3) qanday sonlarni beradi?",
+    "options": [
+      "0, 1, 2",
+      "1, 2, 3",
+      "0, 1, 2, 3",
+      "3, 2, 1"
+    ],
+    "correctAnswer": "0, 1, 2",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "and operatori qachon True bo'ladi?",
+    "options": [
+      "Ikkala shart ham rost bo'lsa",
+      "Kamida bitta shart rost bo'lsa",
+      "Har doim",
+      "Ikkala shart yolg'on bo'lsa"
+    ],
+    "correctAnswer": "Ikkala shart ham rost bo'lsa",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Python",
+    "question": "List comprehension nima uchun ishlatiladi?",
+    "options": [
+      "Listni ixcham yaratish uchun",
+      "Faylni yopish uchun",
+      "Klass meros olish uchun",
+      "Xatoni chiqarish uchun"
+    ],
+    "correctAnswer": "Listni ixcham yaratish uchun",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Python",
+    "question": "__init__ metodi qachon chaqiriladi?",
+    "options": [
+      "Obyekt yaratilganda",
+      "Sikl tugaganda",
+      "Modul o'chirilganda",
+      "Xato yuz berganda"
+    ],
+    "correctAnswer": "Obyekt yaratilganda",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Python",
+    "question": "lambda nima?",
+    "options": [
+      "Qisqa anonim funksiya",
+      "Takrorlash operatori",
+      "Fayl turi",
+      "Klass nomi"
+    ],
+    "correctAnswer": "Qisqa anonim funksiya",
+    "difficulty": "hard"
+  },
+  {
+    "category": "App Inventor",
+    "question": "App Inventor nima uchun ishlatiladi?",
+    "options": [
+      "Mobil ilovalar yaratish uchun",
+      "3D model chizish uchun",
+      "Operatsion tizim o'rnatish uchun",
+      "Matn tarjima qilish uchun"
+    ],
+    "correctAnswer": "Mobil ilovalar yaratish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Designer oynasining vazifasi nima?",
+    "options": [
+      "Interfeys komponentlarini joylash",
+      "Kod bloklarini ishga tushirish",
+      "APKni o'chirish",
+      "Email yuborish"
+    ],
+    "correctAnswer": "Interfeys komponentlarini joylash",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Blocks oynasida nima bajariladi?",
+    "options": [
+      "Dastur mantiqi tuziladi",
+      "Rasm tahrirlanadi",
+      "Telefon quvvatlanadi",
+      "Server sotib olinadi"
+    ],
+    "correctAnswer": "Dastur mantiqi tuziladi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Button komponenti nima uchun kerak?",
+    "options": [
+      "Bosish hodisasini qabul qilish",
+      "Faqat matn ko'rsatish",
+      "Audio yozish",
+      "GPS o'chirish"
+    ],
+    "correctAnswer": "Bosish hodisasini qabul qilish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Label komponenti vazifasi nima?",
+    "options": [
+      "Matn ko'rsatish",
+      "Video yozish",
+      "Sensorni yoqish",
+      "Ilovani yopish"
+    ],
+    "correctAnswer": "Matn ko'rsatish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Screen.Initialize hodisasi qachon ishlaydi?",
+    "options": [
+      "Ekran ochilganda",
+      "Tugma bosilganda",
+      "Telefon o'chganda",
+      "Internet uzilganda"
+    ],
+    "correctAnswer": "Ekran ochilganda",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "TinyDB komponenti nimaga xizmat qiladi?",
+    "options": [
+      "Qurilmada lokal ma'lumot saqlashga",
+      "Video tahrirlashga",
+      "GPS koordinata chizishga",
+      "APK yuborishga"
+    ],
+    "correctAnswer": "Qurilmada lokal ma'lumot saqlashga",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Notifier komponenti nima qiladi?",
+    "options": [
+      "Xabar oynasini ko'rsatadi",
+      "Faylni siqadi",
+      "Ekranni aylantiradi",
+      "Bluetoothni yaratadi"
+    ],
+    "correctAnswer": "Xabar oynasini ko'rsatadi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "ListPicker komponentining vazifasi nima?",
+    "options": [
+      "Ro'yxatdan element tanlash",
+      "Rasm chizish",
+      "Ovozni kuchaytirish",
+      "Parol yashirish"
+    ],
+    "correctAnswer": "Ro'yxatdan element tanlash",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Canvas qaysi vazifa uchun qulay?",
+    "options": [
+      "Grafika va chizish",
+      "Database eksporti",
+      "Login tekshirish",
+      "SMS saqlash"
+    ],
+    "correctAnswer": "Grafika va chizish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "AccelerometerSensor nimani o'lchaydi?",
+    "options": [
+      "Qurilma tezlanishini",
+      "Havo namligini",
+      "Internet tezligini",
+      "Matn uzunligini"
+    ],
+    "correctAnswer": "Qurilma tezlanishini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "HorizontalArrangement nimani boshqaradi?",
+    "options": [
+      "Komponentlarni gorizontal joylashtirishni",
+      "Ovoz formatini",
+      "Database nomini",
+      "GPS aniqligini"
+    ],
+    "correctAnswer": "Komponentlarni gorizontal joylashtirishni",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Web komponenti nima uchun kerak?",
+    "options": [
+      "HTTP so'rov yuborish uchun",
+      "Bluetooth ulash uchun",
+      "Ekran rangini olish uchun",
+      "Rasm kesish uchun"
+    ],
+    "correctAnswer": "HTTP so'rov yuborish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Clock.Timer hodisasi qanday ishlaydi?",
+    "options": [
+      "Belgilangan intervalda takrorlanadi",
+      "Faqat ilova o'rnatilganda ishlaydi",
+      "Faqat tugma bosilganda ishlaydi",
+      "Hech qachon takrorlanmaydi"
+    ],
+    "correctAnswer": "Belgilangan intervalda takrorlanadi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "TextBox komponenti nima uchun kerak?",
+    "options": [
+      "Foydalanuvchi matn kiritishi uchun",
+      "Rasm ko'rsatish uchun",
+      "Vibratsiyani yoqish uchun",
+      "GPSni o'chirish uchun"
+    ],
+    "correctAnswer": "Foydalanuvchi matn kiritishi uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "MIT AI2 Companion nima beradi?",
+    "options": [
+      "Ilovani telefonda tez sinash imkonini",
+      "APKni avtomatik sotishni",
+      "Serverni boshqarishni",
+      "Telefon xotirasini tozalashni"
+    ],
+    "correctAnswer": "Ilovani telefonda tez sinash imkonini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "BluetoothClient komponenti vazifasi nima?",
+    "options": [
+      "Bluetooth qurilmaga ulanish",
+      "Wi-Fi parolini topish",
+      "Rasm chizish",
+      "Sensor yaratish"
+    ],
+    "correctAnswer": "Bluetooth qurilmaga ulanish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "LocationSensor nimani beradi?",
+    "options": [
+      "Joylashuv koordinatalarini",
+      "Batareya rangini",
+      "Matn shriftini",
+      "Audio hajmini"
+    ],
+    "correctAnswer": "Joylashuv koordinatalarini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Procedure bloklari nimaga yordam beradi?",
+    "options": [
+      "Takroriy mantiqni qayta ishlatishga",
+      "Faqat ekran yaratishga",
+      "APK o'chirishga",
+      "Internet ulashga"
+    ],
+    "correctAnswer": "Takroriy mantiqni qayta ishlatishga",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "FirebaseDB komponenti qaysi turdagi saqlashga mos?",
+    "options": [
+      "Bulutli realtime ma'lumotga",
+      "Faqat telefon rasmlariga",
+      "Audio trekka",
+      "APK faylga"
+    ],
+    "correctAnswer": "Bulutli realtime ma'lumotga",
+    "difficulty": "hard"
+  },
+  {
+    "category": "App Inventor",
+    "question": "ImageSprite qayerda ishlatiladi?",
+    "options": [
+      "Canvas ichida harakatlanuvchi tasvir sifatida",
+      "Faqat database ichida",
+      "GPS xaritada",
+      "Email matnida"
+    ],
+    "correctAnswer": "Canvas ichida harakatlanuvchi tasvir sifatida",
+    "difficulty": "medium"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Screen orientation xossasi nimani belgilaydi?",
+    "options": [
+      "Ekran yo'nalishini",
+      "Internet protokolini",
+      "Matn tilini",
+      "Audio tezligini"
+    ],
+    "correctAnswer": "Ekran yo'nalishini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "App Inventor",
+    "question": "Event-driven dasturlash nima?",
+    "options": [
+      "Hodisalarga javoban kod ishlashi",
+      "Kod faqat serverda ishlashi",
+      "Faqat matn yozish",
+      "APKni arxivlash"
+    ],
+    "correctAnswer": "Hodisalarga javoban kod ishlashi",
+    "difficulty": "hard"
+  },
+  {
+    "category": "App Inventor",
+    "question": "ActivityStarter nimaga xizmat qiladi?",
+    "options": [
+      "Boshqa activity yoki ilovani chaqirishga",
+      "Komponentni bo'yashga",
+      "Database o'chirishga",
+      "Sensor aniqligini oshirishga"
+    ],
+    "correctAnswer": "Boshqa activity yoki ilovani chaqirishga",
+    "difficulty": "hard"
+  },
+  {
+    "category": "App Inventor",
+    "question": "APK fayli nima?",
+    "options": [
+      "Android ilova o'rnatish paketi",
+      "Audio formati",
+      "Rasm turi",
+      "Database jadvali"
+    ],
+    "correctAnswer": "Android ilova o'rnatish paketi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "SPIKE Prime Hub nima vazifani bajaradi?",
+    "options": [
+      "Robot dasturini boshqaradi",
+      "Faqat bezak bo'ladi",
+      "Internet kabelini almashtiradi",
+      "3D model chizadi"
+    ],
+    "correctAnswer": "Robot dasturini boshqaradi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Motorning asosiy vazifasi nima?",
+    "options": [
+      "Harakat hosil qilish",
+      "Rangni aniqlash",
+      "Masofani o'lchash",
+      "Kodni saqlash"
+    ],
+    "correctAnswer": "Harakat hosil qilish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Distance Sensor nimani o'lchaydi?",
+    "options": [
+      "Obyektgacha masofani",
+      "Rangni",
+      "Haroratni",
+      "Ovoz balandligini"
+    ],
+    "correctAnswer": "Obyektgacha masofani",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Color Sensor nimani aniqlashi mumkin?",
+    "options": [
+      "Rang va yorug'likni",
+      "Wi-Fi signalini",
+      "Bosimni",
+      "GPS koordinatani"
+    ],
+    "correctAnswer": "Rang va yorug'likni",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Force Sensor qachon signal beradi?",
+    "options": [
+      "Bosilganda",
+      "Rang ko'rganda",
+      "Motor aylanganda",
+      "Hub o'chganda"
+    ],
+    "correctAnswer": "Bosilganda",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Hubdagi portlar nima uchun kerak?",
+    "options": [
+      "Sensor va motorlarni ulash uchun",
+      "Faqat quvvatlash uchun",
+      "Ekran ulash uchun",
+      "Internet sotib olish uchun"
+    ],
+    "correctAnswer": "Sensor va motorlarni ulash uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Gyro sensor qanday ma'lumot beradi?",
+    "options": [
+      "Burilish burchagini",
+      "Rang kodini",
+      "Masofa birligini",
+      "Matn uzunligini"
+    ],
+    "correctAnswer": "Burilish burchagini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Motor tezligi odatda qanday ifodalanadi?",
+    "options": [
+      "Foizda",
+      "Kilogrammda",
+      "Baytda",
+      "Litrda"
+    ],
+    "correctAnswer": "Foizda",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Loop blokining vazifasi nima?",
+    "options": [
+      "Buyruqlarni takrorlash",
+      "Hubni quvvatlash",
+      "Sensorni ajratish",
+      "Rangni o'chirish"
+    ],
+    "correctAnswer": "Buyruqlarni takrorlash",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Condition bloki nimaga asoslanadi?",
+    "options": [
+      "Shart natijasiga",
+      "Faqat motor rangiga",
+      "Hub nomiga",
+      "Loyiha fayliga"
+    ],
+    "correctAnswer": "Shart natijasiga",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Motor pair nima uchun qulay?",
+    "options": [
+      "Ikki motorli yurishni boshqarish uchun",
+      "Ikki rangni saqlash uchun",
+      "Hubni ikki marta yoqish uchun",
+      "Sensorni o'chirish uchun"
+    ],
+    "correctAnswer": "Ikki motorli yurishni boshqarish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Robotni joyida burish uchun motorlar qanday ishlaydi?",
+    "options": [
+      "Qarama-qarshi yo'nalishda",
+      "Bir xil yo'nalishda",
+      "Ikkalasi ham to'xtaydi",
+      "Faqat sensor ishlaydi"
+    ],
+    "correctAnswer": "Qarama-qarshi yo'nalishda",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Line following algoritmi ko'pincha qaysi sensordan foydalanadi?",
+    "options": [
+      "Color Sensor",
+      "Force Sensor",
+      "Distance Sensor",
+      "Faqat motor"
+    ],
+    "correctAnswer": "Color Sensor",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Variable nima uchun kerak?",
+    "options": [
+      "Qiymat saqlash uchun",
+      "Motorni fizik ulash uchun",
+      "Hub rangini bo'yash uchun",
+      "Detalni biriktirish uchun"
+    ],
+    "correctAnswer": "Qiymat saqlash uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Hub Light Matrix nima?",
+    "options": [
+      "Hubdagi 5x5 chiroqlar maydoni",
+      "Masofa sensori",
+      "Motor reduktori",
+      "Quvvat kabeli"
+    ],
+    "correctAnswer": "Hubdagi 5x5 chiroqlar maydoni",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Broadcast xabarlaridan foydalanish nimaga yordam beradi?",
+    "options": [
+      "Skriptlarni muvofiqlashtirishga",
+      "Motorni moylashga",
+      "Detal o'lchashga",
+      "Batareyani almashtirishga"
+    ],
+    "correctAnswer": "Skriptlarni muvofiqlashtirishga",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Sekundlarda kutish bloki nima uchun ishlatiladi?",
+    "options": [
+      "Harakatlar orasida pauza berish uchun",
+      "Sensor qo'shish uchun",
+      "Portni almashtirish uchun",
+      "Kod o'chirish uchun"
+    ],
+    "correctAnswer": "Harakatlar orasida pauza berish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "My Blocks qanday afzallik beradi?",
+    "options": [
+      "Takroriy kodni qayta ishlatish",
+      "Batareyani tez quvvatlash",
+      "Sensor rangini o'zgartirish",
+      "Detal sonini oshirish"
+    ],
+    "correctAnswer": "Takroriy kodni qayta ishlatish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "PID boshqaruv line followerda nima uchun ishlatiladi?",
+    "options": [
+      "Harakatni silliq va aniq tuzatish uchun",
+      "Faqat ovoz chiqarish uchun",
+      "Detal chizish uchun",
+      "Hub nomlash uchun"
+    ],
+    "correctAnswer": "Harakatni silliq va aniq tuzatish uchun",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Yuqori gear ratio odatda nimani oshiradi?",
+    "options": [
+      "Momentni",
+      "Rang aniqligini",
+      "Kod uzunligini",
+      "Portlar sonini"
+    ],
+    "correctAnswer": "Momentni",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Encoder motor ichida nimani o'lchaydi?",
+    "options": [
+      "Aylanish holatini",
+      "Masofadagi rangni",
+      "Hub haroratini",
+      "Batareya hajmini"
+    ],
+    "correctAnswer": "Aylanish holatini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Debug qilish nima?",
+    "options": [
+      "Xatoni topish va tuzatish",
+      "Robotni bezash",
+      "Detalni saralash",
+      "Hubni sotish"
+    ],
+    "correctAnswer": "Xatoni topish va tuzatish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Ultrasonik masofa o'lchash prinsipi nimaga asoslanadi?",
+    "options": [
+      "Tovush impulsining qaytish vaqtiga",
+      "Rang aksiga",
+      "Motor aylanishiga",
+      "Batareya kuchlanishiga"
+    ],
+    "correctAnswer": "Tovush impulsining qaytish vaqtiga",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Robot algoritmi nima?",
+    "options": [
+      "Vazifani bajaruvchi ketma-ket buyruqlar",
+      "Faqat detal ro'yxati",
+      "Hub seriya raqami",
+      "Motor kabeli"
+    ],
+    "correctAnswer": "Vazifani bajaruvchi ketma-ket buyruqlar",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Spike Prime",
+    "question": "Sensor qiymatini siklda o'qish nima beradi?",
+    "options": [
+      "Muhit o'zgarishiga doimiy javob berish",
+      "Hubni o'chirish",
+      "Motorni ajratish",
+      "Faqat bir martalik natija"
+    ],
+    "correctAnswer": "Muhit o'zgarishiga doimiy javob berish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Onshape qanday dastur?",
+    "options": [
+      "Bulutli CAD platforma",
+      "Matn muharriri",
+      "Audio pleer",
+      "Antivirus"
+    ],
+    "correctAnswer": "Bulutli CAD platforma",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Sketch nima?",
+    "options": [
+      "2D chizma",
+      "Tayyor APK",
+      "Audio trek",
+      "Database jadvali"
+    ],
+    "correctAnswer": "2D chizma",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Extrude amali nima qiladi?",
+    "options": [
+      "2D profilga hajm beradi",
+      "Rangni o'chiradi",
+      "Faylni yopadi",
+      "O'lchovni yashiradi"
+    ],
+    "correctAnswer": "2D profilga hajm beradi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Dimension vositasi nima uchun kerak?",
+    "options": [
+      "Aniq o'lcham berish uchun",
+      "Detalni bo'yash uchun",
+      "Akkaunt yaratish uchun",
+      "Format o'zgartirish uchun"
+    ],
+    "correctAnswer": "Aniq o'lcham berish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Fillet amali nima qiladi?",
+    "options": [
+      "Qirrani yumaloqlaydi",
+      "Teshik ochadi",
+      "Detalni ko'chiradi",
+      "Sketchni o'chiradi"
+    ],
+    "correctAnswer": "Qirrani yumaloqlaydi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Chamfer amali nima qiladi?",
+    "options": [
+      "Qirrani qiya kesadi",
+      "Sirtni aylantiradi",
+      "Rasm qo'shadi",
+      "Hajmni nol qiladi"
+    ],
+    "correctAnswer": "Qirrani qiya kesadi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Revolve qanday ishlaydi?",
+    "options": [
+      "Profilni o'q atrofida aylantiradi",
+      "Profilni faqat bo'yaydi",
+      "Faylni eksport qiladi",
+      "Detalni yashiradi"
+    ],
+    "correctAnswer": "Profilni o'q atrofida aylantiradi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Part Studio nimaga xizmat qiladi?",
+    "options": [
+      "Detallarni modellashtirishga",
+      "Faqat video ko'rishga",
+      "Kod yozishga",
+      "Email yuborishga"
+    ],
+    "correctAnswer": "Detallarni modellashtirishga",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Assembly nima uchun kerak?",
+    "options": [
+      "Detallarni yig'ish uchun",
+      "Matn yozish uchun",
+      "Sketch rangini tanlash uchun",
+      "Akkaunt o'chirish uchun"
+    ],
+    "correctAnswer": "Detallarni yig'ish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Mate connector nima belgilaydi?",
+    "options": [
+      "Ulanish nuqtasi va yo'nalishini",
+      "Faqat detal rangini",
+      "Fayl hajmini",
+      "Sketch nomini"
+    ],
+    "correctAnswer": "Ulanish nuqtasi va yo'nalishini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Fully constrained sketch nimani anglatadi?",
+    "options": [
+      "Barcha erkinliklar o'lcham va cheklov bilan belgilangan",
+      "Sketch bo'sh",
+      "Faqat rang tanlangan",
+      "Detal eksport qilingan"
+    ],
+    "correctAnswer": "Barcha erkinliklar o'lcham va cheklov bilan belgilangan",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Onshape",
+    "question": "Coincident constraint nima qiladi?",
+    "options": [
+      "Nuqtalarni bir joyga bog'laydi",
+      "Chiziqlarni parallel qiladi",
+      "Qirrani yumaloqlaydi",
+      "Hajmni oshiradi"
+    ],
+    "correctAnswer": "Nuqtalarni bir joyga bog'laydi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Parallel constraint vazifasi nima?",
+    "options": [
+      "Chiziqlarni parallel saqlaydi",
+      "Aylana chizadi",
+      "Detalni o'chiradi",
+      "Teshik ochadi"
+    ],
+    "correctAnswer": "Chiziqlarni parallel saqlaydi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Mirror vositasi nimaga xizmat qiladi?",
+    "options": [
+      "Simmetrik nusxa yaratishga",
+      "Faylni siqishga",
+      "O'lchovni yashirishga",
+      "Rang almashtirishga"
+    ],
+    "correctAnswer": "Simmetrik nusxa yaratishga",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Linear pattern nima qiladi?",
+    "options": [
+      "Elementni chiziqli yo'nalishda takrorlaydi",
+      "Profilni aylantiradi",
+      "Sketchni yopadi",
+      "Detalga nom beradi"
+    ],
+    "correctAnswer": "Elementni chiziqli yo'nalishda takrorlaydi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Boolean subtract amali nimani bajaradi?",
+    "options": [
+      "Bir hajmdan boshqasini ayiradi",
+      "Ikki detalni bo'yaydi",
+      "Fayl nomini o'zgartiradi",
+      "O'lcham qo'shadi"
+    ],
+    "correctAnswer": "Bir hajmdan boshqasini ayiradi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Plane nima?",
+    "options": [
+      "Sketch qurish mumkin bo'lgan tekislik",
+      "Detal rangi",
+      "Eksport formati",
+      "Ulanish turi"
+    ],
+    "correctAnswer": "Sketch qurish mumkin bo'lgan tekislik",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Loft funksiyasi qachon ishlatiladi?",
+    "options": [
+      "Turli profillar orasida hajm hosil qilishda",
+      "Faqat teshik ochishda",
+      "Detalni nusxalashda",
+      "Fayl yuklashda"
+    ],
+    "correctAnswer": "Turli profillar orasida hajm hosil qilishda",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Onshape",
+    "question": "Sweep amali nima qiladi?",
+    "options": [
+      "Profilni yo'l bo'ylab olib o'tadi",
+      "Profilni o'chiradi",
+      "Chiziqni bo'yaydi",
+      "Faylni ulashadi"
+    ],
+    "correctAnswer": "Profilni yo'l bo'ylab olib o'tadi",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Onshape",
+    "question": "Version yaratishning foydasi nima?",
+    "options": [
+      "Modelning barqaror holatini saqlash",
+      "Internetni tezlatish",
+      "Rang qo'shish",
+      "Detalni chop etish"
+    ],
+    "correctAnswer": "Modelning barqaror holatini saqlash",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "STL eksporti ko'pincha nima uchun kerak?",
+    "options": [
+      "3D printer uchun",
+      "Audio yozish uchun",
+      "Sayt ochish uchun",
+      "Database importi uchun"
+    ],
+    "correctAnswer": "3D printer uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Hole feature vazifasi nima?",
+    "options": [
+      "Standart teshik yaratish",
+      "Detalni aylantirish",
+      "Sketchni ulashish",
+      "Rangni ko'chirish"
+    ],
+    "correctAnswer": "Standart teshik yaratish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Onshape",
+    "question": "Branch nima beradi?",
+    "options": [
+      "Modelning alohida rivojlantirish yo'nalishini",
+      "Faqat fayl nomini",
+      "Detal rangini",
+      "O'lcham birligini"
+    ],
+    "correctAnswer": "Modelning alohida rivojlantirish yo'nalishini",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Onshape",
+    "question": "Mass properties orqali nima olinadi?",
+    "options": [
+      "Massa va hajm kabi xususiyatlar",
+      "Internet tezligi",
+      "Sketch rangi",
+      "Fayl paroli"
+    ],
+    "correctAnswer": "Massa va hajm kabi xususiyatlar",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Onshape",
+    "question": "Onshapening bulutli ishlashi qanday afzallik beradi?",
+    "options": [
+      "Hamkorlik va versiyalarni boshqarish",
+      "Faqat offline ishlash",
+      "Faylni yashirish",
+      "Printer tezligini oshirish"
+    ],
+    "correctAnswer": "Hamkorlik va versiyalarni boshqarish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "Arduino Uno mikrokontrolleri qaysi?",
+    "options": [
+      "ATmega328P",
+      "ESP8266",
+      "RP2040",
+      "STM32F7"
+    ],
+    "correctAnswer": "ATmega328P",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "setup() funksiyasi qachon bajariladi?",
+    "options": [
+      "Dastur boshlanganda bir marta",
+      "Har soniyada",
+      "Har siklda ikki marta",
+      "Faqat xato bo'lganda"
+    ],
+    "correctAnswer": "Dastur boshlanganda bir marta",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "loop() funksiyasi qanday ishlaydi?",
+    "options": [
+      "Doimiy takrorlanadi",
+      "Faqat bir marta ishlaydi",
+      "Faqat kompyuterda ishlaydi",
+      "Hech qachon avtomatik ishlamaydi"
+    ],
+    "correctAnswer": "Doimiy takrorlanadi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "pinMode() nima uchun kerak?",
+    "options": [
+      "Pin rejimini belgilash uchun",
+      "Vaqtni o'lchash uchun",
+      "Matn chiqarish uchun",
+      "Kutubxona o'rnatish uchun"
+    ],
+    "correctAnswer": "Pin rejimini belgilash uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "digitalWrite() nima qiladi?",
+    "options": [
+      "Raqamli pinga HIGH yoki LOW beradi",
+      "Analog qiymat o'qiydi",
+      "Serial tezlikni belgilaydi",
+      "Fayl saqlaydi"
+    ],
+    "correctAnswer": "Raqamli pinga HIGH yoki LOW beradi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "analogRead() odatda qanday oraliqda qiymat qaytaradi?",
+    "options": [
+      "0 dan 1023 gacha",
+      "0 dan 1 gacha",
+      "0 dan 255 gacha",
+      "-100 dan 100 gacha"
+    ],
+    "correctAnswer": "0 dan 1023 gacha",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "PWM signal nima uchun ishlatiladi?",
+    "options": [
+      "O'rtacha quvvatni boshqarish uchun",
+      "Faqat matn yozish uchun",
+      "Internetga ulanish uchun",
+      "Xotirani tozalash uchun"
+    ],
+    "correctAnswer": "O'rtacha quvvatni boshqarish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "LED bilan ketma-ket rezistor nega kerak?",
+    "options": [
+      "Tokni cheklash uchun",
+      "Rangni almashtirish uchun",
+      "Kodni saqlash uchun",
+      "Kuchlanishni o'lchash uchun"
+    ],
+    "correctAnswer": "Tokni cheklash uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "GND nimani anglatadi?",
+    "options": [
+      "Umumiy yer nuqtasini",
+      "Digital pinni",
+      "Analog sensorni",
+      "Dastur nomini"
+    ],
+    "correctAnswer": "Umumiy yer nuqtasini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "Serial.begin(9600) nimani sozlaydi?",
+    "options": [
+      "Serial aloqa tezligini",
+      "PWM chastotasini",
+      "LED yorqinligini",
+      "Pin sonini"
+    ],
+    "correctAnswer": "Serial aloqa tezligini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "delay(1000) qancha kutadi?",
+    "options": [
+      "1 soniya",
+      "1000 soniya",
+      "10 soniya",
+      "0.1 soniya"
+    ],
+    "correctAnswer": "1 soniya",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "Breadboard nima uchun qulay?",
+    "options": [
+      "Payvandlamasdan sxema yig'ish uchun",
+      "Kod kompilyatsiya qilish uchun",
+      "3D model chizish uchun",
+      "Wi-Fi sozlash uchun"
+    ],
+    "correctAnswer": "Payvandlamasdan sxema yig'ish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "Pull-up rezistor vazifasi nima?",
+    "options": [
+      "Kirish pinining aniq holatini ta'minlash",
+      "Motor tezligini oshirish",
+      "Xotirani ko'paytirish",
+      "Serialni o'chirish"
+    ],
+    "correctAnswer": "Kirish pinining aniq holatini ta'minlash",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "Servo motorni boshqarishda qaysi kutubxona ko'p ishlatiladi?",
+    "options": [
+      "Servo.h",
+      "Wire.h",
+      "Math.h",
+      "File.h"
+    ],
+    "correctAnswer": "Servo.h",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "I2C aloqa liniyalari qaysilar?",
+    "options": [
+      "SDA va SCL",
+      "TX va RX",
+      "MOSI va MISO",
+      "VCC va GND"
+    ],
+    "correctAnswer": "SDA va SCL",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "UART aloqa liniyalari qaysilar?",
+    "options": [
+      "TX va RX",
+      "SDA va SCL",
+      "A0 va A1",
+      "MOSI va SCK"
+    ],
+    "correctAnswer": "TX va RX",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "SPI protokolida qaysi liniya ishlatiladi?",
+    "options": [
+      "MOSI",
+      "SDA",
+      "RX",
+      "VIN"
+    ],
+    "correctAnswer": "MOSI",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "millis() funksiyasi nimani qaytaradi?",
+    "options": [
+      "Dastur boshlanganidan beri o'tgan millisekundlarni",
+      "Analog pin sonini",
+      "Kuchlanishni",
+      "Serial belgilarni"
+    ],
+    "correctAnswer": "Dastur boshlanganidan beri o'tgan millisekundlarni",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "Interrupt nimaga yordam beradi?",
+    "options": [
+      "Muhim hodisaga tez javob berishga",
+      "Faqat LED rangini o'zgartirishga",
+      "Sxemani chizishga",
+      "Kod nomlashga"
+    ],
+    "correctAnswer": "Muhim hodisaga tez javob berishga",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Arduino",
+    "question": "Transistor motor boshqarishda nima uchun kerak bo'lishi mumkin?",
+    "options": [
+      "Kattaroq tokni boshqarish uchun",
+      "Faqat kodni qisqartirish uchun",
+      "Haroratni yozish uchun",
+      "Pin nomlash uchun"
+    ],
+    "correctAnswer": "Kattaroq tokni boshqarish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "Diod motor bilan parallel ulansa nima uchun xizmat qiladi?",
+    "options": [
+      "Teskari induktiv kuchlanishdan himoya qiladi",
+      "Motor rangini belgilaydi",
+      "Kod tezligini oshiradi",
+      "Sensorni kalibrlaydi"
+    ],
+    "correctAnswer": "Teskari induktiv kuchlanishdan himoya qiladi",
+    "difficulty": "hard"
+  },
+  {
+    "category": "Arduino",
+    "question": "ADC nima qiladi?",
+    "options": [
+      "Analog signalni raqamli qiymatga aylantiradi",
+      "Raqamli signalni matnga aylantiradi",
+      "Wi-Fi ulaydi",
+      "Fayl yaratadi"
+    ],
+    "correctAnswer": "Analog signalni raqamli qiymatga aylantiradi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "Arduino",
+    "question": "const kalit so'zi nimani bildiradi?",
+    "options": [
+      "Qiymat o'zgarmasligini",
+      "Sikl cheksizligini",
+      "Pin analogligini",
+      "Kutubxona yo'qligini"
+    ],
+    "correctAnswer": "Qiymat o'zgarmasligini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "Arduino sketch nima?",
+    "options": [
+      "Arduino uchun dastur kodi",
+      "Sxema rezistori",
+      "Sensor turi",
+      "Quvvat manbai"
+    ],
+    "correctAnswer": "Arduino uchun dastur kodi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "Arduino",
+    "question": "Debounce nima uchun kerak?",
+    "options": [
+      "Tugma kontaktidagi qisqa tebranishlarni filtrlash uchun",
+      "PWMni oshirish uchun",
+      "Serialni tezlatish uchun",
+      "Motorni sovitish uchun"
+    ],
+    "correctAnswer": "Tugma kontaktidagi qisqa tebranishlarni filtrlash uchun",
+    "difficulty": "hard"
+  },
+  {
+    "category": "ESP32",
+    "question": "ESP32ning muhim imkoniyati qaysi?",
+    "options": [
+      "Wi-Fi va Bluetooth mavjudligi",
+      "Faqat analog hisoblash",
+      "3D chizish",
+      "Faqat USB xotira"
+    ],
+    "correctAnswer": "Wi-Fi va Bluetooth mavjudligi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "GPIO nimani anglatadi?",
+    "options": [
+      "Umumiy maqsadli kirish-chiqish pinlari",
+      "Grafik ekran formati",
+      "Internet paroli",
+      "Xotira fayli"
+    ],
+    "correctAnswer": "Umumiy maqsadli kirish-chiqish pinlari",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "ESP32 dasturlash uchun qaysi muhitdan foydalanish mumkin?",
+    "options": [
+      "Arduino IDE",
+      "Faqat Photoshop",
+      "Excel",
+      "Blender"
+    ],
+    "correctAnswer": "Arduino IDE",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "WiFi.begin(ssid, password) nima qiladi?",
+    "options": [
+      "Wi-Fi tarmoqqa ulanishni boshlaydi",
+      "Bluetoothni o'chiradi",
+      "Pin rejimini o'zgartiradi",
+      "Xotirani formatlaydi"
+    ],
+    "correctAnswer": "Wi-Fi tarmoqqa ulanishni boshlaydi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "ADC nima vazifani bajaradi?",
+    "options": [
+      "Analog signalni raqamlashtiradi",
+      "Wi-Fi signalini yaratadi",
+      "Fayl yuboradi",
+      "Bluetooth nomini oladi"
+    ],
+    "correctAnswer": "Analog signalni raqamlashtiradi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "DAC nima vazifani bajaradi?",
+    "options": [
+      "Raqamli qiymatdan analog signal hosil qiladi",
+      "Analog signalni matnga aylantiradi",
+      "Internetni tezlatadi",
+      "Xotirani o'chiradi"
+    ],
+    "correctAnswer": "Raqamli qiymatdan analog signal hosil qiladi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "Deep sleep rejimi nima uchun kerak?",
+    "options": [
+      "Energiya sarfini kamaytirish uchun",
+      "Wi-Fi tezligini oshirish uchun",
+      "Pinlarni ko'paytirish uchun",
+      "Kod hajmini oshirish uchun"
+    ],
+    "correctAnswer": "Energiya sarfini kamaytirish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "ESP32 odatda qanday kuchlanish mantiqida ishlaydi?",
+    "options": [
+      "3.3V",
+      "12V",
+      "24V",
+      "220V"
+    ],
+    "correctAnswer": "3.3V",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "Bluetooth Low Energy qisqartmasi qaysi?",
+    "options": [
+      "BLE",
+      "HTTP",
+      "ADC",
+      "PWM"
+    ],
+    "correctAnswer": "BLE",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "PWM nima uchun ishlatiladi?",
+    "options": [
+      "Yuklamaga o'rtacha quvvatni boshqarish uchun",
+      "Parol saqlash uchun",
+      "HTTP so'rov uchun",
+      "Xotira o'qish uchun"
+    ],
+    "correctAnswer": "Yuklamaga o'rtacha quvvatni boshqarish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "FreeRTOS vazifalari ESP32da nima beradi?",
+    "options": [
+      "Bir nechta vazifani boshqarish imkonini",
+      "Faqat bitta LEDni yoqishni",
+      "Wi-Fi parolini topishni",
+      "Analog pinni o'chirishni"
+    ],
+    "correctAnswer": "Bir nechta vazifani boshqarish imkonini",
+    "difficulty": "hard"
+  },
+  {
+    "category": "ESP32",
+    "question": "Web server sifatida ESP32 nima qilishi mumkin?",
+    "options": [
+      "HTTP so'rovlarga javob berishi",
+      "Faqat rasm chizishi",
+      "Kompyuterni quvvatlashi",
+      "APK yaratishi"
+    ],
+    "correctAnswer": "HTTP so'rovlarga javob berishi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "MQTT qaysi holatda foydali?",
+    "options": [
+      "IoT xabar almashinuvida",
+      "3D model eksportida",
+      "Rasm tahririda",
+      "USB formatlashda"
+    ],
+    "correctAnswer": "IoT xabar almashinuvida",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "Touch pinlar nimani sezishi mumkin?",
+    "options": [
+      "Sig'im o'zgarishini",
+      "Faqat haroratni",
+      "Wi-Fi parolini",
+      "Audio faylni"
+    ],
+    "correctAnswer": "Sig'im o'zgarishini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "Hall sensori nimani sezadi?",
+    "options": [
+      "Magnit maydonni",
+      "Namlikni",
+      "Ovoz balandligini",
+      "Masofani"
+    ],
+    "correctAnswer": "Magnit maydonni",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "OTA yangilash nimani anglatadi?",
+    "options": [
+      "Dasturiy ta'minotni tarmoq orqali yangilash",
+      "Faqat USB kabel ulash",
+      "Pin nomlash",
+      "Sensor almashtirish"
+    ],
+    "correctAnswer": "Dasturiy ta'minotni tarmoq orqali yangilash",
+    "difficulty": "hard"
+  },
+  {
+    "category": "ESP32",
+    "question": "NVS nimaga mos?",
+    "options": [
+      "Kichik doimiy sozlamalarni saqlashga",
+      "Video saqlashga",
+      "3D model chizishga",
+      "Motor aylantirishga"
+    ],
+    "correctAnswer": "Kichik doimiy sozlamalarni saqlashga",
+    "difficulty": "hard"
+  },
+  {
+    "category": "ESP32",
+    "question": "I2C aloqa liniyalari qaysilar?",
+    "options": [
+      "SDA va SCL",
+      "TX va RX",
+      "MOSI va MISO",
+      "VIN va GND"
+    ],
+    "correctAnswer": "SDA va SCL",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "Station mode nimani anglatadi?",
+    "options": [
+      "ESP32 mavjud Wi-Fi tarmoqqa ulanadi",
+      "ESP32 faqat Bluetooth ishlatadi",
+      "ESP32 o'chadi",
+      "ESP32 analog signal beradi"
+    ],
+    "correctAnswer": "ESP32 mavjud Wi-Fi tarmoqqa ulanadi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "Access Point mode nimani anglatadi?",
+    "options": [
+      "ESP32 o'zi Wi-Fi tarmoq yaratadi",
+      "ESP32 faqat sensor o'qiydi",
+      "ESP32 xotirani o'chiradi",
+      "ESP32 USBni uzadi"
+    ],
+    "correctAnswer": "ESP32 o'zi Wi-Fi tarmoq yaratadi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "ESP32",
+    "question": "HTTP GET so'rovi odatda nima uchun ishlatiladi?",
+    "options": [
+      "Ma'lumot olish uchun",
+      "Qurilmani fizik ulash uchun",
+      "PWM yaratish uchun",
+      "Pin kuchlanishini oshirish uchun"
+    ],
+    "correctAnswer": "Ma'lumot olish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "Watchdog timer nima qiladi?",
+    "options": [
+      "Qotib qolgan dasturni qayta ishga tushirishga yordam beradi",
+      "Wi-Fi parolini saqlaydi",
+      "ADC aniqligini oshiradi",
+      "Sensor rangini almashtiradi"
+    ],
+    "correctAnswer": "Qotib qolgan dasturni qayta ishga tushirishga yordam beradi",
+    "difficulty": "hard"
+  },
+  {
+    "category": "ESP32",
+    "question": "Serial Monitor nima uchun kerak?",
+    "options": [
+      "Debug ma'lumotlarini ko'rish uchun",
+      "Faqat internet ulash uchun",
+      "3D chizish uchun",
+      "Audio yozish uchun"
+    ],
+    "correctAnswer": "Debug ma'lumotlarini ko'rish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "ESP32",
+    "question": "millis() bilan non-blocking timer qurishning foydasi nima?",
+    "options": [
+      "Kutish paytida boshqa ishlarni davom ettirish",
+      "Wi-Fi parolini o'zgartirish",
+      "ADCni o'chirish",
+      "Xotirani bo'shatish"
+    ],
+    "correctAnswer": "Kutish paytida boshqa ishlarni davom ettirish",
+    "difficulty": "hard"
+  },
+  {
+    "category": "ESP32",
+    "question": "ESP32 piniga 5V signal berishda nega ehtiyot bo'lish kerak?",
+    "options": [
+      "Ko'p pinlar 3.3V mantiqqa mo'ljallangan",
+      "Wi-Fi o'chib qoladi",
+      "Kod avtomatik o'chadi",
+      "Bluetooth nomi almashadi"
+    ],
+    "correctAnswer": "Ko'p pinlar 3.3V mantiqqa mo'ljallangan",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "IoT nimani anglatadi?",
+    "options": [
+      "Internet of Things",
+      "Input of Text",
+      "Index of Tools",
+      "Image over TCP"
+    ],
+    "correctAnswer": "Internet of Things",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Blynk platformasi nima uchun ishlatiladi?",
+    "options": [
+      "IoT qurilmalarni monitoring va boshqarish uchun",
+      "3D model yaratish uchun",
+      "Video montaj uchun",
+      "Operatsion tizim yozish uchun"
+    ],
+    "correctAnswer": "IoT qurilmalarni monitoring va boshqarish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Template Blynkda nimani ifodalaydi?",
+    "options": [
+      "Qurilma turining umumiy sozlamalarini",
+      "Faqat rang mavzusini",
+      "Wi-Fi routerni",
+      "Audio faylni"
+    ],
+    "correctAnswer": "Qurilma turining umumiy sozlamalarini",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Datastream nima?",
+    "options": [
+      "Qurilma va bulut orasidagi ma'lumot kanali",
+      "Video oqimi",
+      "USB kabel turi",
+      "3D detal"
+    ],
+    "correctAnswer": "Qurilma va bulut orasidagi ma'lumot kanali",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Virtual Pin nimaga xizmat qiladi?",
+    "options": [
+      "Dasturiy ma'lumot almashish kanaliga",
+      "Faqat fizik LEDga",
+      "Wi-Fi antennasiga",
+      "Quvvat piniga"
+    ],
+    "correctAnswer": "Dasturiy ma'lumot almashish kanaliga",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "BLYNK_WRITE(V0) qachon ishga tushadi?",
+    "options": [
+      "V0 qiymati ilovadan o'zgarganda",
+      "Qurilma o'chganda",
+      "Faqat bootloaderda",
+      "Har doim bir marta"
+    ],
+    "correctAnswer": "V0 qiymati ilovadan o'zgarganda",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Blynk.virtualWrite(V1, value) nima qiladi?",
+    "options": [
+      "V1 datastreamga qiymat yuboradi",
+      "Wi-Fi parolini o'chiradi",
+      "Pin rejimini belgilaydi",
+      "Qurilmani formatlaydi"
+    ],
+    "correctAnswer": "V1 datastreamga qiymat yuboradi",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Authentication token nima uchun kerak?",
+    "options": [
+      "Qurilmani Blynk bilan tasdiqlash uchun",
+      "LED rangini tanlash uchun",
+      "ADCni o'qish uchun",
+      "Serial tezlikni sozlash uchun"
+    ],
+    "correctAnswer": "Qurilmani Blynk bilan tasdiqlash uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Dashboard widget nima?",
+    "options": [
+      "Ma'lumotni ko'rsatish yoki boshqarish elementi",
+      "Sensor kabeli",
+      "ESP32 pini",
+      "Wi-Fi router"
+    ],
+    "correctAnswer": "Ma'lumotni ko'rsatish yoki boshqarish elementi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Button widget qanday vazifa bajaradi?",
+    "options": [
+      "Masofadan buyruq yuboradi",
+      "Faqat grafik chizadi",
+      "Token yaratadi",
+      "Internetni uzadi"
+    ],
+    "correctAnswer": "Masofadan buyruq yuboradi",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Gauge widget nima uchun qulay?",
+    "options": [
+      "Joriy qiymatni ko'rsatish uchun",
+      "Fayl yuklash uchun",
+      "Parol almashtirish uchun",
+      "Kod kompilyatsiya qilish uchun"
+    ],
+    "correctAnswer": "Joriy qiymatni ko'rsatish uchun",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Chart widget vazifasi nima?",
+    "options": [
+      "Qiymat tarixini grafikda ko'rsatish",
+      "LED yoqish",
+      "Pin rejimini almashtirish",
+      "Token o'chirish"
+    ],
+    "correctAnswer": "Qiymat tarixini grafikda ko'rsatish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "BlynkTimer nima uchun kerak?",
+    "options": [
+      "Davriy vazifalarni bloklamasdan bajarish uchun",
+      "Faqat qurilmani qayta yoqish uchun",
+      "Wi-Fi parolini topish uchun",
+      "Sensorni fizik ulash uchun"
+    ],
+    "correctAnswer": "Davriy vazifalarni bloklamasdan bajarish uchun",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "delay()ni ortiqcha ishlatish nega yomon?",
+    "options": [
+      "Bulut bilan aloqa uzilishiga olib kelishi mumkin",
+      "LED doim yonadi",
+      "Token uzunlashadi",
+      "ADC qiymati ikki barobar bo'ladi"
+    ],
+    "correctAnswer": "Bulut bilan aloqa uzilishiga olib kelishi mumkin",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Blynk.run() vazifasi nima?",
+    "options": [
+      "Blynk aloqasini xizmat ko'rsatish",
+      "ESP32ni o'chirish",
+      "Grafikni eksport qilish",
+      "Token yaratish"
+    ],
+    "correctAnswer": "Blynk aloqasini xizmat ko'rsatish",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Event Blynkda nimaga mos?",
+    "options": [
+      "Muhim holat haqida xabar berishga",
+      "Faqat pin nomlashga",
+      "3D modelga",
+      "Serial tezlikka"
+    ],
+    "correctAnswer": "Muhim holat haqida xabar berishga",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Notification qachon foydali?",
+    "options": [
+      "Chegaradan oshish kabi hodisani bildirishda",
+      "LED fizik ulashda",
+      "ADCni kalibrlashda",
+      "Wi-Fi router yasashda"
+    ],
+    "correctAnswer": "Chegaradan oshish kabi hodisani bildirishda",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Device status online nimani bildiradi?",
+    "options": [
+      "Qurilma bulut bilan aloqada ekanini",
+      "Sensor buzilganini",
+      "Token yo'qligini",
+      "Dashboard o'chganini"
+    ],
+    "correctAnswer": "Qurilma bulut bilan aloqada ekanini",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Metadata nima?",
+    "options": [
+      "Qurilma haqidagi qo'shimcha ma'lumot",
+      "Faqat sensor qiymati",
+      "Wi-Fi signali",
+      "PWM impulsi"
+    ],
+    "correctAnswer": "Qurilma haqidagi qo'shimcha ma'lumot",
+    "difficulty": "medium"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Web dashboardning afzalligi nima?",
+    "options": [
+      "Brauzerdan monitoring qilish",
+      "Faqat telefonni quvvatlash",
+      "Sensor ulash",
+      "Kod yozmaslik"
+    ],
+    "correctAnswer": "Brauzerdan monitoring qilish",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Mobile dashboard nima beradi?",
+    "options": [
+      "Telefondan boshqaruv va kuzatuv",
+      "ESP32 pinlarini ko'paytirish",
+      "Internetni almashtirish",
+      "ADC aniqligini oshirish"
+    ],
+    "correctAnswer": "Telefondan boshqaruv va kuzatuv",
+    "difficulty": "easy"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "HTTP API nimaga imkon beradi?",
+    "options": [
+      "Tashqi tizimlar bilan ma'lumot almashishga",
+      "Faqat LED ulashga",
+      "Tokenni fizik saqlashga",
+      "Wi-Fi antennasini yasashga"
+    ],
+    "correctAnswer": "Tashqi tizimlar bilan ma'lumot almashishga",
+    "difficulty": "hard"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Rate limit nima uchun kerak?",
+    "options": [
+      "Haddan tashqari ko'p so'rovni cheklash uchun",
+      "Ranglarni sanash uchun",
+      "Pin kuchlanishini oshirish uchun",
+      "Qurilmani quvvatlash uchun"
+    ],
+    "correctAnswer": "Haddan tashqari ko'p so'rovni cheklash uchun",
+    "difficulty": "hard"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "IoT loyihada tokenni ochiq kodga joylash nega xavfli?",
+    "options": [
+      "Begona shaxs qurilmani boshqarishi mumkin",
+      "LED yonmay qoladi",
+      "ADC faqat nol beradi",
+      "Wi-Fi tezlashadi"
+    ],
+    "correctAnswer": "Begona shaxs qurilmani boshqarishi mumkin",
+    "difficulty": "hard"
+  },
+  {
+    "category": "IoT Blynk",
+    "question": "Sensor qiymatini interval bilan yuborishning foydasi nima?",
+    "options": [
+      "Tarmoq va bulut yukini nazorat qilish",
+      "Tokenni uzaytirish",
+      "Pinlarni ko'paytirish",
+      "Dashboard rangini o'zgartirish"
+    ],
+    "correctAnswer": "Tarmoq va bulut yukini nazorat qilish",
+    "difficulty": "medium"
+  }
+]
