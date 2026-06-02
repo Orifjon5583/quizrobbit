@@ -10,8 +10,8 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => { ensureQuestions(); const currentUser = getCurrentUser(); setUser(currentUser); setProfile(currentUser); setLoading(false); }, []);
-  const signIn = values => { const currentUser = login(values); setUser(currentUser); setProfile(currentUser); };
-  const signUp = values => { const currentUser = register(values); setUser(currentUser); setProfile(currentUser); };
+  const signIn = async values => { const currentUser = await login(values); setUser(currentUser); setProfile(currentUser); };
+  const signUp = async values => { const currentUser = await register(values); setUser(currentUser); setProfile(currentUser); };
   const signInAdmin = values => { const currentUser = loginAdmin(values); setUser(currentUser); setProfile(currentUser); };
   const signOut = () => { logout(); setUser(null); setProfile(null); };
 

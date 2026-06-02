@@ -15,7 +15,7 @@ function AuthForm({ register = false }) {
   const submit = async (event) => {
     event.preventDefault(); setLoading(true); setError("");
     try {
-      if (register) signUp(form); else signIn(form);
+      if (register) await signUp(form); else await signIn(form);
       navigate("/dashboard");
     } catch (e) { setError(friendlyError(e)); } finally { setLoading(false); }
   };

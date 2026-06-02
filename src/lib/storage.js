@@ -7,6 +7,12 @@ const id = () => crypto.randomUUID();
 const read = (key, fallback = []) => JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
 const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 const shuffle = items => [...items].sort(() => Math.random() - 0.5);
+const publicUser = ({ password, passwordHash, passwordSalt, ...user }) => user;
+const hashPassword = async (password, salt) => {
+  const bytes = new TextEncoder().encode(`${salt}:${password}`);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+};
 
 export const ensureQuestions = () => {
   if (localStorage.getItem(KEYS.questionsVersion) !== String(questionVersion.version)) {
@@ -16,16 +22,28 @@ export const ensureQuestions = () => {
 };
 export const getCurrentUser = () => read(KEYS.session, null);
 export const logout = () => localStorage.removeItem(KEYS.session);
-export const register = ({ name, email, password }) => {
+export const register = async ({ name, email, password }) => {
   const users = read(KEYS.users);
   if (users.some(user => user.email === email)) throw new Error("Bu email bilan avval ro'yxatdan o'tilgan.");
-  const user = { uid: id(), name, displayName: name, email, password, role: "user", createdAt: new Date().toISOString() };
-  write(KEYS.users, [...users, user]); write(KEYS.session, user); return user;
+  const passwordSalt = id();
+  const user = { uid: id(), name, displayName: name, email, passwordSalt, passwordHash: await hashPassword(password, passwordSalt), role: "user", createdAt: new Date().toISOString() };
+  const sessionUser = publicUser(user);
+  write(KEYS.users, [...users, user]); write(KEYS.session, sessionUser); return sessionUser;
 };
-export const login = ({ email, password }) => {
-  const user = read(KEYS.users).find(item => item.email === email && item.password === password);
-  if (!user) throw new Error("Email yoki parol noto'g'ri.");
-  write(KEYS.session, user); return user;
+export const login = async ({ email, password }) => {
+  const users = read(KEYS.users); const userIndex = users.findIndex(item => item.email === email);
+  if (userIndex === -1) throw new Error("Email yoki parol noto'g'ri.");
+  const user = users[userIndex];
+  const matches = user.passwordHash ? await hashPassword(password, user.passwordSalt) === user.passwordHash : user.password === password;
+  if (!matches) throw new Error("Email yoki parol noto'g'ri.");
+  if (!user.passwordHash) {
+    const passwordSalt = id();
+    users[userIndex] = { ...user, passwordSalt, passwordHash: await hashPassword(password, passwordSalt) };
+    delete users[userIndex].password;
+    write(KEYS.users, users);
+  }
+  const sessionUser = publicUser(users[userIndex]);
+  write(KEYS.session, sessionUser); return sessionUser;
 };
 export const loginAdmin = ({ email, password }) => {
   if (email !== "admin" || password !== "admin123") throw new Error("Admin login yoki paroli noto'g'ri.");
