@@ -73,10 +73,12 @@ app.get("/api/auth/me", auth, async (req, res) => {
   rows[0] ? res.json(userJson(rows[0])) : res.status(404).json({ error: "Foydalanuvchi topilmadi." });
 });
 app.get("/api/results/me", auth, async (req, res) => {
+  if (req.auth.role === "admin") return res.json([]);
   const { rows } = await pool.query("SELECT r.*, u.name user_name FROM results r JOIN users u ON u.id=r.user_id WHERE r.user_id=$1 ORDER BY r.created_at DESC", [req.auth.id]);
   res.json(rows.map(resultJson));
 });
 app.get("/api/results/:id", auth, async (req, res) => {
+  if (req.auth.role === "admin") return res.status(404).json({ error: "Natija topilmadi." });
   const { rows } = await pool.query("SELECT r.*, u.name user_name FROM results r JOIN users u ON u.id=r.user_id WHERE r.id=$1 AND r.user_id=$2", [req.params.id, req.auth.id]);
   rows[0] ? res.json(resultJson(rows[0])) : res.status(404).json({ error: "Natija topilmadi." });
 });
@@ -118,6 +120,7 @@ app.post("/api/admin/questions", auth, admin, async (req, res) => {
   }
 });
 app.post("/api/quiz/start", auth, async (req, res) => {
+  if (req.auth.role === "admin") return res.status(403).json({ error: "Admin uchun quiz mavjud emas." });
   const selected = shuffle(questions.filter(question => question.category === req.body.category));
   if (!selected.length) return res.status(400).json({ error: "Bu bo'limda hali savollar yo'q." });
   const id = randomUUID();
@@ -125,6 +128,7 @@ app.post("/api/quiz/start", auth, async (req, res) => {
   res.json({ sessionId: id, category: req.body.category, index: 0, total: selected.length, question: publicQuestion(selected[0]) });
 });
 app.post("/api/quiz/answer", auth, async (req, res) => {
+  if (req.auth.role === "admin") return res.status(403).json({ error: "Admin uchun quiz mavjud emas." });
   const client = await pool.connect();
   try {
     await client.query("BEGIN");
@@ -155,6 +159,7 @@ app.post("/api/quiz/answer", auth, async (req, res) => {
   } catch (error) { await client.query("ROLLBACK"); res.status(400).json({ error: error.message }); } finally { client.release(); }
 });
 app.post("/api/quiz/continue", auth, async (req, res) => {
+  if (req.auth.role === "admin") return res.status(403).json({ error: "Admin uchun quiz mavjud emas." });
   const client = await pool.connect();
   try {
     await client.query("BEGIN");
