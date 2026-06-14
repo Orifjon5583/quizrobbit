@@ -82,20 +82,54 @@ app.post("/api/quiz/answer", auth, async (req, res) => {
     const { rows } = await client.query("SELECT * FROM quiz_sessions WHERE id=$1 AND user_id=$2 FOR UPDATE", [req.body.sessionId, req.auth.id]);
     const session = rows[0];
     if (!session || session.status !== "active") throw new Error("Quiz sessiyasi yakunlangan.");
+    if (session.answers.length > session.current_index) throw new Error("Bu savolga javob allaqachon berilgan.");
     const question = questionMap.get(session.question_ids[session.current_index]);
     const elapsed = Date.now() - new Date(session.question_started_at).getTime();
     const selectedAnswer = elapsed <= 20_000 ? req.body.selectedAnswer ?? null : null;
     const answers = [...session.answers, { questionId: question.id, selectedAnswer, isCorrect: selectedAnswer === question.correctAnswer }];
+    await client.query("UPDATE quiz_sessions SET answers=$1 WHERE id=$2", [JSON.stringify(answers), session.id]);
+    await client.query("COMMIT");
+    res.json({
+      sessionId: session.id,
+      category: session.category,
+      index: session.current_index,
+      total: session.question_ids.length,
+      question: publicQuestion(question),
+      review: {
+        selectedAnswer,
+        correctAnswer: question.correctAnswer,
+        isCorrect: selectedAnswer === question.correctAnswer,
+      },
+      canContinue: true,
+      completed: false,
+    });
+  } catch (error) { await client.query("ROLLBACK"); res.status(400).json({ error: error.message }); } finally { client.release(); }
+});
+app.post("/api/quiz/continue", auth, async (req, res) => {
+  const client = await pool.connect();
+  try {
+    await client.query("BEGIN");
+    const { rows } = await client.query("SELECT * FROM quiz_sessions WHERE id=$1 AND user_id=$2 FOR UPDATE", [req.body.sessionId, req.auth.id]);
+    const session = rows[0];
+    if (!session || session.status !== "active") throw new Error("Quiz sessiyasi yakunlangan.");
+    if (session.answers.length !== session.current_index + 1) throw new Error("Avval javobni tasdiqlang.");
+
     const nextIndex = session.current_index + 1;
     if (nextIndex < session.question_ids.length) {
-      await client.query("UPDATE quiz_sessions SET answers=$1,current_index=$2,question_started_at=NOW() WHERE id=$3", [JSON.stringify(answers), nextIndex, session.id]);
+      await client.query("UPDATE quiz_sessions SET current_index=$1,question_started_at=NOW() WHERE id=$2", [nextIndex, session.id]);
       await client.query("COMMIT");
-      return res.json({ sessionId: session.id, category: session.category, index: nextIndex, total: 25, question: publicQuestion(questionMap.get(session.question_ids[nextIndex])) });
+      return res.json({ sessionId: session.id, category: session.category, index: nextIndex, total: session.question_ids.length, question: publicQuestion(questionMap.get(session.question_ids[nextIndex])) });
     }
-    const correctCount = answers.filter(answer => answer.isCorrect).length; const percentage = Math.round(correctCount / 25 * 100); const resultId = randomUUID();
-    await client.query("INSERT INTO results(id,user_id,category,correct_count,wrong_count,percentage,score,level,duration_seconds) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)", [resultId, req.auth.id, session.category, correctCount, 25 - correctCount, percentage, correctCount * 4, levelFor(percentage), Math.round((Date.now() - new Date(session.started_at).getTime()) / 1000)]);
-    await client.query("UPDATE quiz_sessions SET answers=$1,status='completed' WHERE id=$2", [JSON.stringify(answers), session.id]);
-    await client.query("COMMIT"); res.json({ completed: true, resultId });
+
+    const answers = session.answers;
+    const correctCount = answers.filter(answer => answer.isCorrect).length;
+    const total = session.question_ids.length;
+    const percentage = Math.round(correctCount / total * 100);
+    const resultId = randomUUID();
+    await client.query("INSERT INTO results(id,user_id,category,correct_count,wrong_count,percentage,score,level,duration_seconds) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9)", [resultId, req.auth.id, session.category, correctCount, total - correctCount, percentage, correctCount * 4, levelFor(percentage), Math.round((Date.now() - new Date(session.started_at).getTime()) / 1000)]);
+    await client.query("UPDATE quiz_sessions SET status='completed' WHERE id=$1", [session.id]);
+    await client.query("COMMIT");
+    res.json({ completed: true, resultId });
   } catch (error) { await client.query("ROLLBACK"); res.status(400).json({ error: error.message }); } finally { client.release(); }
 });
 

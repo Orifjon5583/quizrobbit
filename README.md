@@ -12,7 +12,7 @@ AWS server uchun React, Tailwind CSS, Node.js va PostgreSQL asosidagi quiz platf
 - Natijani faqat bir marta saqlash
 - Admin panelda barcha ro'yxatdan o'tgan foydalanuvchilar
 - Mobil va desktop responsive dizayn
-- Savollarni `savollar.xlsx` orqali boshqarish
+- Savollarni `data/questions` va `savollar.xlsx` orqali boshqarish
 
 ## Lokal Ishga Tushirish
 
@@ -38,7 +38,7 @@ Vite `/api` so'rovlarini `127.0.0.1:3001` portga yo'naltiradi.
 
 ## Excel Savollar
 
-Savollar [savollar.xlsx](./savollar.xlsx) faylida saqlanadi. Server ishga tushganda Excel faylni o'qiydi. Ustun nomlari:
+Savollar `data/questions` papkasida saqlanadi, `savollar.xlsx` esa undan avtomatik yaratiladi. Server ishga tushganda JSON fayllarni o'qiydi. Ustun nomlari:
 
 ```text
 category, question, option1, option2, option3, option4, correctAnswer, difficulty

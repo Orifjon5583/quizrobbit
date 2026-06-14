@@ -13,7 +13,7 @@ export default function Dashboard() {
   const best = Math.max(0, ...results.map(r => r.score));
   return <div className="animate-fade-in">
     <div className="flex flex-wrap items-center justify-between gap-4"><div><p className="text-sm text-slate-500 sm:text-base">Xush kelibsiz,</p><h1 className="text-2xl font-black sm:text-3xl">{profile?.name || user.displayName || "Foydalanuvchi"}</h1></div><Link to="/categories" className="btn-primary w-full sm:w-auto"><PlayCircle size={18} /> Quiz boshlash</Link></div>
-    <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-6 sm:gap-4"><StatCard label="Quizlar" value={results.length} /><StatCard label="Eng yaxshi" value={best} accent="text-emerald-600" /><StatCard label="Yo'nalish" value="8" accent="text-orange-500" /></div>
+    <div className="mt-5 grid grid-cols-3 gap-2 sm:mt-6 sm:gap-4"><StatCard label="Quizlar" value={results.length} /><StatCard label="Eng yaxshi" value={best} accent="text-emerald-600" /><StatCard label="Yo'nalish" value="9" accent="text-orange-500" /></div>
     <h2 className="mt-8 text-xl font-black">Tezkor yo'nalish tanlash</h2>
     <div className="mt-4 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">{categories.map(({ name, icon: Icon, color }) => <Link className="card group" to={`/quiz/${encodeURIComponent(name)}`} key={name}><div className={`inline-flex rounded-xl bg-gradient-to-br p-2 text-white ${color}`}><Icon size={20}/></div><div className="mt-3 flex justify-between text-sm font-bold sm:text-base">{name}<ArrowRight className="opacity-60 group-hover:opacity-100" size={18}/></div></Link>)}</div>
     <h2 className="mt-8 text-xl font-black">So'nggi natijalar</h2>

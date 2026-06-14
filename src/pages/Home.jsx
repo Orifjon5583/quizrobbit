@@ -8,11 +8,11 @@ export default function Home() {
       <div>
         <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-bold text-indigo-700 sm:text-sm dark:bg-indigo-950 dark:text-indigo-300">Bilimingizni sinang</span>
         <h1 className="mt-4 text-4xl font-black leading-tight sm:mt-5 sm:text-5xl md:text-6xl">Attestatsiya uchun <span className="text-indigo-600">professional</span> quiz platforma</h1>
-        <p className="mt-4 max-w-xl text-base text-slate-600 sm:mt-5 sm:text-lg dark:text-slate-300">8 ta yo'nalish, har birida 25 ta savol. Natijangizni o'lchang va reytingda yuqorilang.</p>
+        <p className="mt-4 max-w-xl text-base text-slate-600 sm:mt-5 sm:text-lg dark:text-slate-300">9 ta yo'nalish, har birida 25 ta savol. Natijangizni o'lchang va reytingda yuqorilang.</p>
         <Link to="/register" className="btn-primary mt-5 w-full sm:mt-7 sm:w-auto">Boshlash <ArrowRight size={18}/></Link>
       </div>
       <div className="card grid grid-cols-3 gap-2 sm:gap-4">
-        {[["200", "Savol"], ["8", "Yo'nalish"], ["20s", "Har savol"]].map(([value, label]) => <div className="rounded-xl bg-indigo-50 p-3 text-center sm:rounded-2xl sm:p-5 dark:bg-indigo-950/50" key={label}><p className="text-2xl font-black text-indigo-600 sm:text-3xl">{value}</p><p className="text-xs text-slate-500 sm:text-sm">{label}</p></div>)}
+        {[["225", "Savol"], ["9", "Yo'nalish"], ["20s", "Har savol"]].map(([value, label]) => <div className="rounded-xl bg-indigo-50 p-3 text-center sm:rounded-2xl sm:p-5 dark:bg-indigo-950/50" key={label}><p className="text-2xl font-black text-indigo-600 sm:text-3xl">{value}</p><p className="text-xs text-slate-500 sm:text-sm">{label}</p></div>)}
         <div className="col-span-3 grid gap-2 pt-1 sm:grid-cols-3 sm:gap-3">
           <p className="flex gap-2 text-sm"><Clock3 className="text-indigo-500" size={18}/> Aniq timer</p>
           <p className="flex gap-2 text-sm"><Award className="text-indigo-500" size={18}/> Jonli reyting</p>

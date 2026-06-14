@@ -1,23 +1,35 @@
 import { createHash } from "node:crypto";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import ExcelJS from "exceljs";
 
-const workbook = new ExcelJS.Workbook(); await workbook.xlsx.readFile(resolve("savollar.xlsx"));
-const sheet = workbook.worksheets[0]; const headers = sheet.getRow(1).values.slice(1).map(String);
-const rows = []; sheet.eachRow((row, index) => { if (index > 1) rows.push(Object.fromEntries(headers.map((header, cell) => [header, row.getCell(cell + 1).text]))); });
-const allowedCategories = ["Scratch", "Python", "App Inventor", "Spike Prime", "Onshape", "Arduino", "ESP32", "IoT Blynk"];
-const questions = rows.map((row, index) => {
-  const line = index + 2; const options = [row.option1, row.option2, row.option3, row.option4].map(value => String(value).trim());
-  const question = { category: String(row.category).trim(), question: String(row.question).trim(), options, correctAnswer: String(row.correctAnswer).trim(), difficulty: String(row.difficulty || "easy").trim() };
-  if (!allowedCategories.includes(question.category)) throw new Error(`${line}-qatorda category noto'g'ri.`);
-  if (!question.question || options.some(option => !option)) throw new Error(`${line}-qatorda savol yoki variant bo'sh.`);
-  if (!options.includes(question.correctAnswer)) throw new Error(`${line}-qatorda correctAnswer variantlardan biriga teng emas.`);
-  if (!["easy", "medium", "hard"].includes(question.difficulty)) throw new Error(`${line}-qatorda difficulty noto'g'ri.`);
-  return question;
-});
-const json = `${JSON.stringify(questions, null, 2)}\n`; const version = createHash("sha256").update(json).digest("hex").slice(0, 12);
+const questionDir = resolve("data/questions");
+const files = (await readdir(questionDir)).filter(file => file.endsWith(".json")).sort();
+const questions = [];
+
+for (const file of files) {
+  const rows = JSON.parse(await readFile(resolve(questionDir, file), "utf8"));
+  if (!Array.isArray(rows)) throw new Error(`${file} fayli massiv formatida bo'lishi kerak.`);
+  rows.forEach((row, index) => {
+    const line = index + 2;
+    const category = String(row.category || "").trim();
+    const question = String(row.question || "").trim();
+    const options = [row.options?.[0], row.options?.[1], row.options?.[2], row.options?.[3]].map(value => String(value || "").trim());
+    const correctAnswer = String(row.correctAnswer || "").trim();
+    const difficulty = String(row.difficulty || "easy").trim();
+
+    if (!category) throw new Error(`${file}:${line} qatorida category bo'sh.`);
+    if (!question) throw new Error(`${file}:${line} qatorida question bo'sh.`);
+    if (options.some(option => !option)) throw new Error(`${file}:${line} qatorida variantlar bo'sh.`);
+    if (!options.includes(correctAnswer)) throw new Error(`${file}:${line} qatorida correctAnswer variantlardan biriga teng emas.`);
+    if (!["easy", "medium", "hard"].includes(difficulty)) throw new Error(`${file}:${line} qatorida difficulty noto'g'ri.`);
+
+    questions.push({ category, question, options, correctAnswer, difficulty });
+  });
+}
+
+const json = `${JSON.stringify(questions, null, 2)}\n`;
+const version = createHash("sha256").update(json).digest("hex").slice(0, 12);
 await mkdir(resolve("src/generated"), { recursive: true });
 await writeFile(resolve("src/generated/questions.json"), json);
 await writeFile(resolve("src/generated/questions-version.json"), `${JSON.stringify({ version }, null, 2)}\n`);
-console.log(`${questions.length} ta savol Excel fayldan yangilandi.`);
+console.log(`${questions.length} ta savol data/questions dan yangilandi.`);
