@@ -32,6 +32,15 @@ const normalizeQuestionPayload = body => {
   const difficulty = String(body.difficulty || "easy").trim();
   return { category, question, options, correctAnswer, difficulty };
 };
+const readQuestionRows = async path => {
+  try {
+    const rows = JSON.parse(await readFile(path, "utf8"));
+    return Array.isArray(rows) ? rows : null;
+  } catch (error) {
+    if (error.code === "ENOENT") return [];
+    throw error;
+  }
+};
 
 app.get("/api/health", (_req, res) => res.json({ ok: true, questions: questions.length }));
 app.get("/api/catalog", (_req, res) => res.json({
@@ -91,13 +100,13 @@ app.post("/api/admin/questions", auth, admin, async (req, res) => {
   try {
     const payload = normalizeQuestionPayload(req.body);
     if (!payload.category || !payload.question || payload.options.some(option => !option)) return res.status(400).json({ error: "Ma'lumotlarni to'g'ri kiriting." });
-    if (!questionCategories.includes(payload.category)) return res.status(400).json({ error: "Bunday kategoriya mavjud emas." });
+    if (!questionCategories.some(category => category.name === payload.category)) return res.status(400).json({ error: "Bunday kategoriya mavjud emas." });
     if (!payload.options.includes(payload.correctAnswer)) return res.status(400).json({ error: "To'g'ri javob variantlardan biriga teng bo'lishi kerak." });
     if (!["easy", "medium", "hard"].includes(payload.difficulty)) return res.status(400).json({ error: "Difficulty noto'g'ri." });
 
     const path = questionFilePath(payload.category);
-    const rows = JSON.parse(await readFile(path, "utf8"));
-    if (!Array.isArray(rows)) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
+    const rows = await readQuestionRows(path);
+    if (!rows) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
     if (rows.some(row => String(row.question || "").trim().toLowerCase() === payload.question.toLowerCase())) return res.status(409).json({ error: "Bu savol allaqachon mavjud." });
 
     rows.push({ category: payload.category, question: payload.question, options: payload.options, correctAnswer: payload.correctAnswer, difficulty: payload.difficulty });
