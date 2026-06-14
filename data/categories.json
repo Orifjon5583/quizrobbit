@@ -1,0 +1,11 @@
+[
+  { "name": "Scratch", "description": "Blokli dasturlash va algoritmlar", "color": "from-orange-400 to-amber-500", "icon": "Blocks" },
+  { "name": "Python", "description": "Sintaksis, ma'lumotlar va mantiq", "color": "from-blue-500 to-indigo-600", "icon": "Braces" },
+  { "name": "App Inventor", "description": "Mobil ilovalar yaratish", "color": "from-emerald-400 to-teal-600", "icon": "Smartphone" },
+  { "name": "Ustozlar yo'riqnomasi", "description": "Dars tashkiloti va baholash", "color": "from-amber-400 to-orange-600", "icon": "GraduationCap" },
+  { "name": "Spike Prime", "description": "Robototexnika va sensorlar", "color": "from-rose-400 to-red-600", "icon": "Bot" },
+  { "name": "Onshape", "description": "3D modellashtirish asoslari", "color": "from-sky-400 to-blue-600", "icon": "Box" },
+  { "name": "Arduino", "description": "Mikrokontroller va elektronika", "color": "from-cyan-400 to-teal-600", "icon": "CircuitBoard" },
+  { "name": "ESP32", "description": "Wi-Fi mikrokontroller", "color": "from-violet-400 to-purple-600", "icon": "Cpu" },
+  { "name": "IoT Blynk", "description": "IoT monitoring va boshqaruv", "color": "from-lime-400 to-green-600", "icon": "Radio" }
+]

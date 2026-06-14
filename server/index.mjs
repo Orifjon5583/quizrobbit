@@ -34,6 +34,10 @@ const normalizeQuestionPayload = body => {
 };
 
 app.get("/api/health", (_req, res) => res.json({ ok: true, questions: questions.length }));
+app.get("/api/catalog", (_req, res) => res.json({
+  totalQuestions: questions.length,
+  categories: questionCategories.map(category => ({ ...category, count: questions.filter(question => question.category === category.name).length })),
+}));
 app.post("/api/auth/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -79,7 +83,7 @@ app.get("/api/admin/users", auth, admin, async (_req, res) => {
   res.json(rows.map(userJson));
 });
 app.get("/api/admin/questions-summary", auth, admin, (_req, res) => {
-  const counts = Object.fromEntries(questionCategories.map(category => [category, 0]));
+  const counts = Object.fromEntries(questionCategories.map(category => [category.name, 0]));
   for (const question of questions) counts[question.category] = (counts[question.category] || 0) + 1;
   res.json({ total: questions.length, categories: counts });
 });
@@ -105,11 +109,11 @@ app.post("/api/admin/questions", auth, admin, async (req, res) => {
   }
 });
 app.post("/api/quiz/start", auth, async (req, res) => {
-  const selected = shuffle(questions.filter(question => question.category === req.body.category)).slice(0, 25);
-  if (selected.length < 25) return res.status(400).json({ error: "Bu yo'nalishda 25 ta savol mavjud emas." });
+  const selected = shuffle(questions.filter(question => question.category === req.body.category));
+  if (!selected.length) return res.status(400).json({ error: "Bu bo'limda hali savollar yo'q." });
   const id = randomUUID();
   await pool.query("INSERT INTO quiz_sessions(id,user_id,category,question_ids) VALUES($1,$2,$3,$4)", [id, req.auth.id, req.body.category, JSON.stringify(selected.map(question => question.id))]);
-  res.json({ sessionId: id, category: req.body.category, index: 0, total: 25, question: publicQuestion(selected[0]) });
+  res.json({ sessionId: id, category: req.body.category, index: 0, total: selected.length, question: publicQuestion(selected[0]) });
 });
 app.post("/api/quiz/answer", auth, async (req, res) => {
   const client = await pool.connect();

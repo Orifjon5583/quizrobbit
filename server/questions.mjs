@@ -3,11 +3,13 @@ import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const questionDir = resolve("data/questions");
+const categoryCatalog = JSON.parse(await readFile(resolve("data/categories.json"), "utf8"));
 const allowedDifficulties = new Set(["easy", "medium", "hard"]);
+const allowedCategoryNames = new Set(categoryCatalog.map(category => category.name));
 
 export let questions = [];
 export let questionMap = new Map();
-export let categories = [];
+export let categories = categoryCatalog;
 
 const slugify = value => String(value)
   .normalize("NFKD")
@@ -26,6 +28,7 @@ const normalizeRow = (row, source, index) => {
   const difficulty = String(row.difficulty || "easy").trim();
 
   if (!category) throw new Error(`${source} qator ${index + 1}: category bo'sh.`);
+  if (!allowedCategoryNames.has(category)) throw new Error(`${source} qator ${index + 1}: category noto'g'ri.`);
   if (!question) throw new Error(`${source} qator ${index + 1}: question bo'sh.`);
   if (options.some(option => !option)) throw new Error(`${source} qator ${index + 1}: variantlar bo'sh.`);
   if (!options.includes(correctAnswer)) throw new Error(`${source} qator ${index + 1}: correctAnswer variantlardan biriga teng emas.`);
@@ -43,7 +46,6 @@ const normalizeRow = (row, source, index) => {
 
 export async function refreshQuestions() {
   const files = (await readdir(questionDir)).filter(file => file.endsWith(".json")).sort();
-  if (!files.length) throw new Error("data/questions papkasida savollar topilmadi.");
 
   const rawQuestions = [];
   for (const file of files) {
@@ -54,7 +56,7 @@ export async function refreshQuestions() {
 
   questions = rawQuestions;
   questionMap = new Map(questions.map(question => [question.id, question]));
-  categories = [...new Set(questions.map(question => question.category))];
+  categories = categoryCatalog.map(category => ({ ...category, count: questions.filter(question => question.category === category.name).length }));
   return { questions, questionMap, categories };
 }
 

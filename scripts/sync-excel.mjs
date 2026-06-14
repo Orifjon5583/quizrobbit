@@ -3,6 +3,8 @@ import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const questionDir = resolve("data/questions");
+const categoryCatalog = JSON.parse(await readFile(resolve("data/categories.json"), "utf8"));
+const allowedCategories = new Set(categoryCatalog.map(category => category.name));
 const files = (await readdir(questionDir)).filter(file => file.endsWith(".json")).sort();
 const questions = [];
 
@@ -18,6 +20,7 @@ for (const file of files) {
     const difficulty = String(row.difficulty || "easy").trim();
 
     if (!category) throw new Error(`${file}:${line} qatorida category bo'sh.`);
+    if (!allowedCategories.has(category)) throw new Error(`${file}:${line} qatorida category noto'g'ri.`);
     if (!question) throw new Error(`${file}:${line} qatorida question bo'sh.`);
     if (options.some(option => !option)) throw new Error(`${file}:${line} qatorida variantlar bo'sh.`);
     if (!options.includes(correctAnswer)) throw new Error(`${file}:${line} qatorida correctAnswer variantlardan biriga teng emas.`);

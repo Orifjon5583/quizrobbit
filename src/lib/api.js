@@ -17,6 +17,7 @@ const authRequest = async (path, values) => {
 };
 export const api = {
   me: () => request("/auth/me"), register: values => authRequest("/auth/register", values), login: values => authRequest("/auth/login", values), adminLogin: values => authRequest("/auth/admin-login", values),
+  catalog: () => request("/catalog"),
   myResults: () => request("/results/me"), result: id => request(`/results/${id}`), leaderboard: (category, fast) => request(`/leaderboard?category=${encodeURIComponent(category)}&fast=${fast}`), users: () => request("/admin/users"),
   adminQuestionSummary: () => request("/admin/questions-summary"),
   createQuestion: values => request("/admin/questions", { method: "POST", body: JSON.stringify(values) }),
