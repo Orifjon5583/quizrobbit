@@ -26,6 +26,7 @@ const normalizeRow = (row, source, index) => {
   const options = [row.options?.[0], row.options?.[1], row.options?.[2], row.options?.[3]].map(value => String(value || "").trim());
   const correctAnswer = String(row.correctAnswer || "").trim();
   const difficulty = String(row.difficulty || "easy").trim();
+  const id = String(row.id || "").trim();
 
   if (!category) throw new Error(`${source} qator ${index + 1}: category bo'sh.`);
   if (!allowedCategoryNames.has(category)) throw new Error(`${source} qator ${index + 1}: category noto'g'ri.`);
@@ -35,12 +36,13 @@ const normalizeRow = (row, source, index) => {
   if (!allowedDifficulties.has(difficulty)) throw new Error(`${source} qator ${index + 1}: difficulty noto'g'ri.`);
 
   return {
-    id: createHash("sha1").update(`${source}:${index}:${category}:${question}`).digest("hex"),
+    id: id || createHash("sha1").update(`${source}:${index}:${category}:${question}`).digest("hex"),
     category,
     question,
     options,
     correctAnswer,
     difficulty,
+    sourceFile: source,
   };
 };
 
