@@ -42,7 +42,6 @@ export default function Admin() {
   useEffect(() => { load(); }, []);
 
   const categoryCounts = useMemo(() => summary?.categories || {}, [summary]);
-  const teacherCount = categoryCounts["Ustozlar yo'riqnomasi"] || 0;
   const totalQuestions = summary?.total || 0;
 
   const submit = async event => {
@@ -84,7 +83,7 @@ export default function Admin() {
 
     <div className="mt-5 grid gap-2 sm:grid-cols-3 sm:gap-4">
       <StatCard label="Jami savollar" value={totalQuestions} />
-      <StatCard label="Ustozlar bo'limi" value={teacherCount} accent="text-amber-600" />
+      <StatCard label="Bo'limlar" value={Object.keys(categoryCounts).length || categories.length} accent="text-amber-600" />
       <StatCard label="Foydalanuvchilar" value={users.length} accent="text-emerald-600" />
     </div>
 
