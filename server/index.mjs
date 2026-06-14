@@ -4,8 +4,9 @@ import express from "express";
 import jwt from "jsonwebtoken";
 import { randomUUID } from "node:crypto";
 import { resolve } from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
 import { initDatabase, pool } from "./db.mjs";
-import { publicQuestion, questionMap, questions, shuffle } from "./questions.mjs";
+import { categoryFileName, categories as questionCategories, publicQuestion, questionMap, questions, refreshQuestions, shuffle } from "./questions.mjs";
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -22,6 +23,15 @@ const auth = (req, res, next) => {
   catch { res.status(401).json({ error: "Tizimga qayta kiring." }); }
 };
 const admin = (req, res, next) => req.auth.role === "admin" ? next() : res.status(403).json({ error: "Admin ruxsati kerak." });
+const questionFilePath = category => resolve("data/questions", categoryFileName(category));
+const normalizeQuestionPayload = body => {
+  const category = String(body.category || "").trim();
+  const question = String(body.question || "").trim();
+  const options = [body.option1, body.option2, body.option3, body.option4].map(value => String(value || "").trim());
+  const correctAnswer = String(body.correctAnswer || "").trim();
+  const difficulty = String(body.difficulty || "easy").trim();
+  return { category, question, options, correctAnswer, difficulty };
+};
 
 app.get("/api/health", (_req, res) => res.json({ ok: true, questions: questions.length }));
 app.post("/api/auth/register", async (req, res) => {
@@ -67,6 +77,32 @@ app.get("/api/leaderboard", auth, async (req, res) => {
 app.get("/api/admin/users", auth, admin, async (_req, res) => {
   const { rows } = await pool.query("SELECT id, name, email, role, created_at FROM users ORDER BY created_at DESC");
   res.json(rows.map(userJson));
+});
+app.get("/api/admin/questions-summary", auth, admin, (_req, res) => {
+  const counts = Object.fromEntries(questionCategories.map(category => [category, 0]));
+  for (const question of questions) counts[question.category] = (counts[question.category] || 0) + 1;
+  res.json({ total: questions.length, categories: counts });
+});
+app.post("/api/admin/questions", auth, admin, async (req, res) => {
+  try {
+    const payload = normalizeQuestionPayload(req.body);
+    if (!payload.category || !payload.question || payload.options.some(option => !option)) return res.status(400).json({ error: "Ma'lumotlarni to'g'ri kiriting." });
+    if (!questionCategories.includes(payload.category)) return res.status(400).json({ error: "Bunday kategoriya mavjud emas." });
+    if (!payload.options.includes(payload.correctAnswer)) return res.status(400).json({ error: "To'g'ri javob variantlardan biriga teng bo'lishi kerak." });
+    if (!["easy", "medium", "hard"].includes(payload.difficulty)) return res.status(400).json({ error: "Difficulty noto'g'ri." });
+
+    const path = questionFilePath(payload.category);
+    const rows = JSON.parse(await readFile(path, "utf8"));
+    if (!Array.isArray(rows)) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
+    if (rows.some(row => String(row.question || "").trim().toLowerCase() === payload.question.toLowerCase())) return res.status(409).json({ error: "Bu savol allaqachon mavjud." });
+
+    rows.push({ category: payload.category, question: payload.question, options: payload.options, correctAnswer: payload.correctAnswer, difficulty: payload.difficulty });
+    await writeFile(path, `${JSON.stringify(rows, null, 2)}\n`);
+    await refreshQuestions();
+    res.json({ ok: true, count: rows.length });
+  } catch (error) {
+    res.status(500).json({ error: error.message || "Server xatosi." });
+  }
 });
 app.post("/api/quiz/start", auth, async (req, res) => {
   const selected = shuffle(questions.filter(question => question.category === req.body.category)).slice(0, 25);
