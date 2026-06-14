@@ -12,7 +12,7 @@ AWS server uchun React, Tailwind CSS, Node.js va PostgreSQL asosidagi quiz platf
 - Natijani faqat bir marta saqlash
 - Admin panelda barcha ro'yxatdan o'tgan foydalanuvchilar
 - Mobil va desktop responsive dizayn
-- Savollarni `data/questions` va `savollar.xlsx` orqali boshqarish
+- Savollarni `data/questions` orqali boshqarish
 
 ## Lokal Ishga Tushirish
 
@@ -36,18 +36,22 @@ npm run dev
 
 Vite `/api` so'rovlarini `127.0.0.1:3001` portga yo'naltiradi.
 
-## Excel Savollar
+## Savol Manbasi
 
-Savollar `data/questions` papkasida saqlanadi, `savollar.xlsx` esa undan avtomatik yaratiladi. Server ishga tushganda JSON fayllarni o'qiydi. Ustun nomlari:
+Savollar `data/questions` papkasida saqlanadi. Server ishga tushganda JSON fayllarni o'qiydi. Har bir bo'lim uchun alohida `.json` fayl ishlatiladi.
+
+Savol formati:
 
 ```text
 category, question, option1, option2, option3, option4, correctAnswer, difficulty
 ```
 
-Excel o'zgarganidan keyin serverni qayta ishga tushiring:
+Admin panel orqali savol qo'shsangiz, server avtomatik ravishda tegishli JSON faylni yangilaydi.
+
+Bo'limlar uchun namuna fayl nomi:
 
 ```bash
-pm2 restart attestatsiya
+data/questions/scratch.json
 ```
 
 ## AWS Deploy

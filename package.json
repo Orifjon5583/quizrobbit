@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "questions:excel": "node scripts/create-excel.mjs",
-    "questions:sync": "node scripts/sync-excel.mjs",
-    "dev": "npm run questions:sync && vite",
-    "build": "npm run questions:sync && vite build",
+    "questions:generate": "node scripts/sync-excel.mjs",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview",
     "start": "node server/index.mjs",
     "server:dev": "node --watch server/index.mjs"
