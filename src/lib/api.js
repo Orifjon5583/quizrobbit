@@ -19,8 +19,11 @@ export const api = {
   me: () => request("/auth/me"), register: values => authRequest("/auth/register", values), login: values => authRequest("/auth/login", values), adminLogin: values => authRequest("/auth/admin-login", values),
   catalog: () => request("/catalog"),
   myResults: () => request("/results/me"), result: id => request(`/results/${id}`), leaderboard: (category, fast) => request(`/leaderboard?category=${encodeURIComponent(category)}&fast=${fast}`), users: () => request("/admin/users"),
+  adminQuestions: () => request("/admin/questions"),
   adminQuestionSummary: () => request("/admin/questions-summary"),
   createQuestion: values => request("/admin/questions", { method: "POST", body: JSON.stringify(values) }),
+  updateQuestion: (id, values) => request(`/admin/questions/${id}`, { method: "PUT", body: JSON.stringify(values) }),
+  deleteQuestion: id => request(`/admin/questions/${id}`, { method: "DELETE" }),
   startQuiz: category => request("/quiz/start", { method: "POST", body: JSON.stringify({ category }) }), answerQuiz: (sessionId, selectedAnswer) => request("/quiz/answer", { method: "POST", body: JSON.stringify({ sessionId, selectedAnswer }) }),
   continueQuiz: sessionId => request("/quiz/continue", { method: "POST", body: JSON.stringify({ sessionId }) }),
 };

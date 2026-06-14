@@ -93,6 +93,9 @@ app.get("/api/admin/users", auth, admin, async (_req, res) => {
   const { rows } = await pool.query("SELECT id, name, email, role, created_at FROM users ORDER BY created_at DESC");
   res.json(rows.map(userJson));
 });
+app.get("/api/admin/questions", auth, admin, (_req, res) => {
+  res.json(questions.map(({ sourceFile, ...question }) => question));
+});
 app.get("/api/admin/questions-summary", auth, admin, (_req, res) => {
   const counts = Object.fromEntries(questionCategories.map(category => [category.name, 0]));
   for (const question of questions) counts[question.category] = (counts[question.category] || 0) + 1;
@@ -111,10 +114,69 @@ app.post("/api/admin/questions", auth, admin, async (req, res) => {
     if (!rows) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
     if (rows.some(row => String(row.question || "").trim().toLowerCase() === payload.question.toLowerCase())) return res.status(409).json({ error: "Bu savol allaqachon mavjud." });
 
-    rows.push({ category: payload.category, question: payload.question, options: payload.options, correctAnswer: payload.correctAnswer, difficulty: payload.difficulty });
+    rows.push({ id: randomUUID(), category: payload.category, question: payload.question, options: payload.options, correctAnswer: payload.correctAnswer, difficulty: payload.difficulty });
     await writeFile(path, `${JSON.stringify(rows, null, 2)}\n`);
     await refreshQuestions();
     res.json({ ok: true, count: rows.length });
+  } catch (error) {
+    res.status(500).json({ error: error.message || "Server xatosi." });
+  }
+});
+app.put("/api/admin/questions/:id", auth, admin, async (req, res) => {
+  try {
+    const current = questions.find(question => question.id === req.params.id);
+    if (!current) return res.status(404).json({ error: "Savol topilmadi." });
+
+    const payload = normalizeQuestionPayload(req.body);
+    if (!payload.category || !payload.question || payload.options.some(option => !option)) return res.status(400).json({ error: "Ma'lumotlarni to'g'ri kiriting." });
+    if (!questionCategories.some(category => category.name === payload.category)) return res.status(400).json({ error: "Bunday kategoriya mavjud emas." });
+    if (!payload.options.includes(payload.correctAnswer)) return res.status(400).json({ error: "To'g'ri javob variantlardan biriga teng bo'lishi kerak." });
+    if (!["easy", "medium", "hard"].includes(payload.difficulty)) return res.status(400).json({ error: "Difficulty noto'g'ri." });
+
+    const sourcePath = resolve("data/questions", current.sourceFile || categoryFileName(current.category));
+    const targetPath = resolve("data/questions", categoryFileName(payload.category));
+    const sourceRows = await readQuestionRows(sourcePath);
+    if (!sourceRows) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
+
+    const nextQuestion = { id: current.id, category: payload.category, question: payload.question, options: payload.options, correctAnswer: payload.correctAnswer, difficulty: payload.difficulty };
+    const sourceIndex = sourceRows.findIndex(row => String(row.id || "").trim() === current.id || (String(row.question || "").trim() === current.question && String(row.category || "").trim() === current.category));
+    if (sourceIndex === -1) return res.status(404).json({ error: "Savol faylda topilmadi." });
+
+    if (sourcePath === targetPath) {
+      sourceRows[sourceIndex] = nextQuestion;
+      await writeFile(sourcePath, `${JSON.stringify(sourceRows, null, 2)}\n`);
+    } else {
+      sourceRows.splice(sourceIndex, 1);
+      await writeFile(sourcePath, `${JSON.stringify(sourceRows, null, 2)}\n`);
+
+      const targetRows = await readQuestionRows(targetPath);
+      if (!targetRows) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
+      targetRows.push(nextQuestion);
+      await writeFile(targetPath, `${JSON.stringify(targetRows, null, 2)}\n`);
+    }
+
+    await refreshQuestions();
+    res.json({ ok: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message || "Server xatosi." });
+  }
+});
+app.delete("/api/admin/questions/:id", auth, admin, async (req, res) => {
+  try {
+    const current = questions.find(question => question.id === req.params.id);
+    if (!current) return res.status(404).json({ error: "Savol topilmadi." });
+
+    const sourcePath = resolve("data/questions", current.sourceFile || categoryFileName(current.category));
+    const sourceRows = await readQuestionRows(sourcePath);
+    if (!sourceRows) return res.status(500).json({ error: "Savollar fayli noto'g'ri formatda." });
+
+    const sourceIndex = sourceRows.findIndex(row => String(row.id || "").trim() === current.id || (String(row.question || "").trim() === current.question && String(row.category || "").trim() === current.category));
+    if (sourceIndex === -1) return res.status(404).json({ error: "Savol faylda topilmadi." });
+
+    sourceRows.splice(sourceIndex, 1);
+    await writeFile(sourcePath, `${JSON.stringify(sourceRows, null, 2)}\n`);
+    await refreshQuestions();
+    res.json({ ok: true });
   } catch (error) {
     res.status(500).json({ error: error.message || "Server xatosi." });
   }
